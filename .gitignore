@@ -1,0 +1,10 @@
+# XAMPP & Temp files
+.DS_Store
+Thumbs.db
+*.log
+tmp/
+.gemini/
+.agents/
+karpathy-coding-skill.md
+shadcn-coding-skill.md
+bible.txt

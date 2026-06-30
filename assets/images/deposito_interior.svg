@@ -1,0 +1,13 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <rect width="1200" height="800" fill="#0D0D0D"/>
+  <rect x="0" y="0" width="1200" height="100" fill="#141414"/>
+  <rect x="200" y="100" width="800" height="600" fill="#111111"/>
+  <rect x="50" y="150" width="120" height="600" fill="#1A1A1A"/>
+  <rect x="1030" y="150" width="120" height="600" fill="#1A1A1A"/>
+  <rect x="400" y="300" width="200" height="280" fill="#1D4D1D" rx="8"/>
+  <rect x="420" y="280" width="160" height="30" fill="#2A6B2A" rx="4"/>
+  <rect x="0" y="500" width="400" height="300" fill="#1A1A1A"/>
+  <rect x="800" y="400" width="400" height="400" fill="#1A1A1A"/>
+  <text x="600" y="720" text-anchor="middle" font-family="system-ui" font-size="20" fill="#555550">Interior — Depósito Viento Sur Materiales</text>
+  <text x="600" y="750" text-anchor="middle" font-family="system-ui" font-size="14" fill="#333330">[ Reemplazar con foto real del local ]</text>
+</svg>
