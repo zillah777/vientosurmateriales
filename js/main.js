@@ -156,13 +156,25 @@ const navbar = document.getElementById('navbar');
 if (navbar) {
   window.addEventListener('scroll', () => {
     navbar.style.borderBottomColor = window.scrollY > 10
-      ? 'rgba(245,158,11,0.15)'
+      ? 'rgba(224,111,43,0.15)'
       : 'var(--border)';
   }, { passive: true });
 }
 
-// ── 6. Video Autoplay Booster ─────────────────────────── //
+// ── 6. Video Autoplay Booster & Scroll Progress ──────────── //
 window.addEventListener('DOMContentLoaded', () => {
+  // Scroll Progress Indicator
+  const progressBar = document.getElementById('scroll-progress');
+  if (progressBar) {
+    window.addEventListener('scroll', () => {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      progressBar.style.width = scrolled + '%';
+    }, { passive: true });
+  }
+
+  // Video Autoplay Booster
   const video = document.getElementById('construction-video');
   if (video) {
     // Explicit play request (must be muted to succeed)

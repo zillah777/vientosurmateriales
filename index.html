@@ -158,9 +158,11 @@
 
 
 <body>
+  <div id="scroll-progress"></div>
 
-  <!-- ══ TOPBAR ══ -->
-  <div style="background:var(--primary); border-bottom:1px solid rgba(0,0,0,0.1); padding:8px 0; font-size:0.75rem; font-weight:500; color:rgba(255,255,255,0.9);">
+  <!-- ═ ═  TOPBAR ═ ═  -->
+  <div style="background:var(--brand-brown); border-bottom:1px solid rgba(0,0,0,0.1); padding:6px 0; font-size:0.75rem; font-weight:500; color:rgba(255,255,255,0.9); position:relative;">
+    <div aria-hidden="true" style="position:absolute; inset:0; background:rgba(75,46,36,0.95); backdrop-filter:blur(10px); z-index:-1;"></div>
     <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
       <div style="display:flex; align-items:center; gap:1.25rem;">
         <span style="display:flex; align-items:center; gap:5px;">
@@ -189,7 +191,7 @@
     </div>
   </div>
 
-  <!-- ══ NAVBAR ══ -->
+  <!-- ═ ═  NAVBAR ═ ═  -->
   <header id="navbar" class="nav-header" role="navigation" aria-label="Navegación principal" style="position:relative;">
     <div class="container" style="display:flex; align-items:center; justify-content:space-between; height:90px;" id="nav-container">
 
@@ -239,21 +241,21 @@
 
   <main id="main-content" role="main">
 
-    <!-- ══ HERO ══ -->
-    <section aria-label="Presentación" style="min-height:92vh; display:flex; flex-direction:column; justify-content:center; border-bottom:1px solid rgba(60,60,67,0.12); position:relative; overflow:hidden;">
+    <!-- ═ ═  HERO ═ ═  -->
+    <section aria-label="Presentación" style="min-height:88vh; display:flex; flex-direction:column; justify-content:center; border-bottom:1px solid rgba(60,60,67,0.12); position:relative; overflow:hidden;">
 
       <!-- Background Swiper Slider -->
       <div class="swiper hero-swiper" style="position:absolute !important; inset:0; z-index:0; pointer-events:none; height:100%; width:100%;">
         <div class="swiper-wrapper" style="height:100%; width:100%;">
-          <div class="swiper-slide" style="background:url('assets/images/hero_bg.png') center/cover no-repeat; filter:brightness(0.35) saturate(0.6); height:100%; width:100%;"></div>
-          <div class="swiper-slide" style="background:url('assets/images/hero_herramientas.png') center/cover no-repeat; filter:brightness(0.35) saturate(0.6); height:100%; width:100%;"></div>
-          <div class="swiper-slide" style="background:url('assets/images/hero_obra.png') center/cover no-repeat; filter:brightness(0.35) saturate(0.6); height:100%; width:100%;"></div>
-          <div class="swiper-slide" style="background:url('assets/images/hero_materiales.png') center/cover no-repeat; filter:brightness(0.35) saturate(0.6); height:100%; width:100%;"></div>
+          <div class="swiper-slide" style="background:url('assets/images/hero_bg.png') center/cover no-repeat; filter:brightness(0.45) saturate(0.8); height:100%; width:100%;"></div>
+          <div class="swiper-slide" style="background:url('assets/images/hero_herramientas.png') center/cover no-repeat; filter:brightness(0.45) saturate(0.8); height:100%; width:100%;"></div>
+          <div class="swiper-slide" style="background:url('assets/images/hero_obra.png') center/cover no-repeat; filter:brightness(0.45) saturate(0.8); height:100%; width:100%;"></div>
+          <div class="swiper-slide" style="background:url('assets/images/hero_materiales.png') center/cover no-repeat; filter:brightness(0.45) saturate(0.8); height:100%; width:100%;"></div>
         </div>
       </div>
 
-      <!-- Terracota brand overlay -->
-      <div aria-hidden="true" style="position:absolute; inset:0; background:linear-gradient(135deg, rgba(75,46,36,0.25) 0%, transparent 50%, rgba(224,111,43,0.12) 100%); pointer-events:none; z-index:1;"></div>
+      <!-- Terracota brand overlay with radial depth -->
+      <div aria-hidden="true" style="position:absolute; inset:0; background:linear-gradient(135deg, rgba(75,46,36,0.25) 0%, transparent 50%, rgba(224,111,43,0.12) 100%), radial-gradient(circle at bottom left, rgba(75,46,36,0.6) 0%, transparent 70%); pointer-events:none; z-index:1;"></div>
 
       <!-- Bottom fade to page bg -->
       <div aria-hidden="true" style="position:absolute; bottom:0; left:0; right:0; height:200px; background:linear-gradient(to top, var(--bg-primary) 0%, transparent 100%); pointer-events:none; z-index:1;"></div>
@@ -325,7 +327,7 @@
     <section id="servicios" aria-labelledby="servicios-heading" style="padding:6rem 0; border-bottom:1px solid rgba(60,60,67,0.10); background:var(--bg-primary);">
       <div class="container">
         <div style="margin-bottom:3rem;">
-          <p class="reveal" data-delay="0" style="font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:var(--primary); margin-bottom:0.75rem; letter-spacing:0.05em;">// por_que_elegirnos</p>
+          <p class="reveal" data-delay="0" style="font-size:0.75rem; font-weight:700; color:var(--brand-terracota); margin-bottom:0.75rem; letter-spacing:0.1em; text-transform:uppercase;">POR QUÉ ELEGIRNOS</p>
           <h2 id="servicios-heading" class="reveal" data-delay="60" style="font-size:clamp(1.75rem,3vw,2.5rem); font-weight:800; letter-spacing:-0.03em; margin:0;">
             El corralón que mueve<br>la Patagonia.
           </h2>
@@ -388,12 +390,12 @@
       </div>
     </section>
 
-    <!-- ══ VIDEO BANNER (CONSTRUCCIÓN PATAGÓNICA) ══ -->
+    <!-- ═ ═  VIDEO BANNER (CONSTRUCCIÓN PATAGÓNICA) ═ ═  -->
     <section aria-label="Video de obra en curso" style="background:var(--bg-primary); padding-top:2rem; padding-bottom:4rem;">
       <div class="container">
-        <div class="reveal ios-card" data-delay="0" style="position:relative; width:100%; height:280px; border-radius:var(--r-xl); overflow:hidden; box-shadow:var(--shadow-md); border:1px solid var(--glass-border);">
+        <div class="reveal ios-card" data-delay="0" style="position:relative; width:100%; min-height:clamp(260px, 40vh, 360px); border-radius:var(--r-xl); overflow:hidden; box-shadow:var(--shadow-md); border:1px solid var(--glass-border); display:flex; align-items:center; justify-content:center;">
           <!-- Looping HTML5 Video -->
-          <video id="construction-video" autoplay loop muted playsinline poster="assets/images/hero_obra.png" style="width:100%; height:100%; object-fit:cover; filter:brightness(0.7) contrast(1.05);">
+          <video id="construction-video" autoplay loop muted playsinline poster="assets/images/hero_obra.png" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; filter:brightness(0.6) contrast(1.1);">
             <source src="https://player.vimeo.com/external/371433846.sd.mp4?s=236da2f3c022f73b64082215ff006e8688a24b19&profile_id=139&oauth2_token_id=57447761" type="video/mp4">
             Tu navegador no soporta reproducción de video.
           </video>
@@ -403,17 +405,22 @@
             <span style="color:#ffffff; font-size:0.75rem; font-weight:600; letter-spacing:0.02em;">Obras Activas en Paso de Indios</span>
           </div>
           <!-- Dark overlay gradient to blend in -->
-          <div aria-hidden="true" style="position:absolute; inset:0; background:linear-gradient(to top, rgba(0,0,0,0.4) 0%, transparent 50%); pointer-events:none;"></div>
+          <div aria-hidden="true" style="position:absolute; inset:0; background:linear-gradient(to top, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.2) 100%); pointer-events:none; z-index:1;"></div>
+          <!-- CTA Overlay -->
+          <div style="position:relative; z-index:2; text-align:center; padding:2rem;">
+            <h2 style="color:#fff; font-size:clamp(1.5rem, 4vw, 2.5rem); margin-bottom:1rem; text-shadow:0 2px 10px rgba(0,0,0,0.3);">Construimos tu sueño patagónico</h2>
+            <a href="https://wa.me/5492804361923" class="btn btn-primary" style="backdrop-filter:blur(8px);">Contactar Asesor</a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ══ CATÁLOGO SWIPER ══ -->
+    <!-- ═ ═  CATÁLOGO SWIPER ═ ═  -->
     <section id="categorias" aria-labelledby="categorias-heading" style="padding:6rem 0; border-bottom:1px solid rgba(60,60,67,0.10); overflow:hidden; background:var(--bg-secondary);">
       <div class="container">
         <div style="display:flex; align-items:flex-end; justify-content:space-between; flex-wrap:wrap; gap:1.5rem; margin-bottom:2.5rem;">
           <div>
-            <p class="reveal" data-delay="0" style="font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:var(--primary); margin-bottom:0.75rem; letter-spacing:0.05em;">// catalogo_destacado</p>
+            <p class="reveal" data-delay="0" style="font-size:0.75rem; font-weight:700; color:var(--brand-terracota); margin-bottom:0.75rem; letter-spacing:0.1em; text-transform:uppercase;">CATÁLOGO</p>
             <h2 id="categorias-heading" class="reveal" data-delay="60" style="font-size:clamp(1.75rem,3vw,2.25rem); font-weight:800; letter-spacing:-0.03em; margin:0;">
               Encuentra los suministros correctos
             </h2>
@@ -545,12 +552,12 @@
       </div>
     </section>
 
-    <!-- ══ NOSOTROS ══ -->
+    <!-- ═ ═  NOSOTROS ═ ═  -->
     <section id="nosotros" aria-labelledby="nosotros-heading" style="padding:6rem 0; border-bottom:1px solid rgba(60,60,67,0.10); background:var(--bg-secondary);">
       <div class="container">
         <div style="display:grid; grid-template-columns:1fr; gap:3rem;" id="nosotros-grid">
           <div style="max-width:580px;">
-            <p class="reveal" data-delay="0" style="font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:var(--primary); margin-bottom:0.75rem; letter-spacing:0.05em;">// nuestra_historia</p>
+            <p class="reveal" data-delay="0" style="font-size:0.75rem; font-weight:700; color:var(--brand-terracota); margin-bottom:0.75rem; letter-spacing:0.1em; text-transform:uppercase;">NUESTRA HISTORIA</p>
             <h2 id="nosotros-heading" class="reveal" data-delay="60" style="font-size:clamp(1.75rem,3vw,2.5rem); font-weight:800; letter-spacing:-0.03em; margin-bottom:1.5rem;">
               Nacimos en la Patagonia.<br>Construimos con ella.
             </h2>
@@ -607,12 +614,12 @@
       </div>
     </section>
 
-    <!-- ══ TESTIMONIALS (REALES — GOOGLE) ══ -->
+    <!-- ═ ═  TESTIMONIALS (REALES — GOOGLE) ═ ═  -->
     <section aria-labelledby="testimonios-heading" style="padding:6rem 0; border-bottom:1px solid rgba(60,60,67,0.10); background:var(--bg-primary);">
       <div class="container">
         <div style="margin-bottom:3rem; display:flex; align-items:flex-end; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
           <div>
-            <p class="reveal" data-delay="0" style="font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:var(--primary); margin-bottom:0.75rem; letter-spacing:0.05em;">// reseñas_verificadas</p>
+            <p class="reveal" data-delay="0" style="font-size:0.75rem; font-weight:700; color:var(--brand-terracota); margin-bottom:0.75rem; letter-spacing:0.1em; text-transform:uppercase;">RESEÑAS VERIFICADAS</p>
             <h2 id="testimonios-heading" class="reveal" data-delay="60" style="font-size:clamp(1.5rem,3vw,2.25rem); font-weight:800; letter-spacing:-0.03em; margin:0;">
               Lo que dicen nuestros clientes
             </h2>
@@ -660,7 +667,7 @@
               <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#4285F4,#34A853);display:flex;align-items:center;justify-content:center;font-size:0.8125rem;font-weight:800;color:#fff;flex-shrink:0;" aria-hidden="true">CC</div>
               <div>
                 <p style="font-size:0.875rem; font-weight:600; color:var(--foreground); margin:0;">Carlos Carmen</p>
-                <p style="font-size:0.75rem; color:var(--muted-foreground); margin:0;">Guía Local Â· 13 opiniones Â· Hace 3 años</p>
+                <p style="font-size:0.75rem; color:var(--muted-foreground); margin:0;">Guía Local · 13 opiniones · Hace 3 años</p>
               </div>
             </footer>
           </article>
@@ -669,7 +676,7 @@
           <article class="review-card reveal" data-delay="80"
                    style="border-color:rgba(224,111,43,0.5); background:linear-gradient(135deg, #fdf5ee 0%, #faeade 100%); position:relative;"
                    aria-label="Reseña destacada de Sebastiano González en Google Maps">
-            <div style="position:absolute; top:-12px; left:1.5rem; background:var(--primary); color:var(--primary-foreground); font-size:0.6875rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; padding:3px 10px; border-radius:999px;">â­ Destacada</div>
+            <div style="position:absolute; top:-12px; left:1.5rem; background:var(--primary); color:var(--primary-foreground); font-size:0.6875rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; padding:3px 10px; border-radius:999px;">⭐ Destacada</div>
             <div class="stars" aria-label="5 de 5 estrellas">
               <i data-lucide="star" style="width:16px;height:16px;fill:currentColor;" aria-hidden="true"></i>
               <i data-lucide="star" style="width:16px;height:16px;fill:currentColor;" aria-hidden="true"></i>
@@ -684,7 +691,7 @@
               <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#FBBC05,#EA4335);display:flex;align-items:center;justify-content:center;font-size:0.8125rem;font-weight:800;color:#fff;flex-shrink:0;" aria-hidden="true">SG</div>
               <div>
                 <p style="font-size:0.875rem; font-weight:600; color:var(--foreground); margin:0;">Sebastiano González</p>
-                <p style="font-size:0.75rem; color:var(--muted-foreground); margin:0;">Guía Local Â· 49 opiniones Â· Hace 2 años</p>
+                <p style="font-size:0.75rem; color:var(--muted-foreground); margin:0;">Guía Local · 49 opiniones · Hace 2 años</p>
               </div>
             </footer>
           </article>
@@ -719,7 +726,7 @@
       <div class="container">
 
         <div style="margin-bottom:3rem;">
-          <p class="reveal" data-delay="0" style="font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:var(--primary); margin-bottom:0.75rem; letter-spacing:0.05em;">// encontranos</p>
+          <p class="reveal" data-delay="0" style="font-size:0.75rem; font-weight:700; color:var(--brand-terracota); margin-bottom:0.75rem; letter-spacing:0.1em; text-transform:uppercase;">CONTACTO</p>
           <h2 id="contacto-heading" class="reveal" data-delay="60" style="font-size:clamp(1.75rem,3vw,2.5rem); font-weight:800; letter-spacing:-0.03em; margin:0;">
             Información de Contacto
           </h2>
@@ -820,22 +827,42 @@
 
   </main>
 
-  <!-- ══ FOOTER ══ -->
-  <footer role="contentinfo" style="border-top:1px solid rgba(60,60,67,0.12); padding:3rem 0; background:var(--bg-primary);">
-    <div class="container" style="display:flex; flex-wrap:wrap; gap:1.5rem; justify-content:space-between; align-items:center;">
-      <a href="#" aria-label="Volver al inicio" style="display:flex; align-items:center;">
-        <img src="assets/images/logo.png" alt="Viento Sur Materiales" style="height:56px; width:auto; display:block; image-rendering:-webkit-optimize-contrast; image-rendering:crisp-edges;">
-      </a>
-      <nav aria-label="Navegación de pie de página" style="display:flex; flex-wrap:wrap; gap:1.25rem;">
-        <a href="#servicios" class="nav-link">Servicios</a>
-        <a href="#categorias" class="nav-link">Catálogo</a>
-        <a href="#nosotros" class="nav-link">Nosotros</a>
-        <a href="#contacto" class="nav-link">Contacto</a>
-        <a href="politicas.html" class="nav-link">Políticas</a>
-      </nav>
-      <p style="font-size:0.8125rem; color:var(--muted-foreground); margin:0; text-align:right;">
-        Â© <span id="year">2026</span> Viento Sur Materiales. Todos los derechos reservados.
-      </p>
+  <!-- ═ ═  FOOTER PREMIUM ═ ═  -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="assets/images/logo.png" alt="Viento Sur Materiales" class="footer-logo">
+          <p style="margin:0; line-height:1.6;">Todo lo que tu obra necesita, en un solo lugar. Más de 15 años construyendo la Patagonia con vos.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/vientosurmateriales" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61591145682526" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="https://wa.me/5492804361923" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </a>
+          </div>
+        </div>
+        <nav aria-label="Navegación de pie de página" style="display:flex; flex-direction:column; gap:0.75rem;">
+          <h4 style="color:#fff; font-size:1rem; margin-bottom:0.5rem;">Navegación</h4>
+          <a href="#servicios">Servicios</a>
+          <a href="#categorias">Catálogo</a>
+          <a href="#nosotros">Nosotros</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+        <div style="display:flex; flex-direction:column; gap:0.75rem;">
+          <h4 style="color:#fff; font-size:1rem; margin-bottom:0.5rem;">Legal</h4>
+          <a href="politicas.html">Políticas de Privacidad</a>
+          <p style="margin:0;">Paso de Indios, Chubut<br>Patagonia Argentina</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p style="margin:0;">© <span id="year">2026</span> Viento Sur Materiales. Todos los derechos reservados.</p>
+        <p style="margin:0;">Diseñado en la Patagonia</p>
+      </div>
     </div>
   </footer>
 

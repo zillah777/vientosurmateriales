@@ -110,6 +110,18 @@ button { font-family: inherit; }
 svg, svg * { shape-rendering: geometricPrecision; }
 img { image-rendering: -webkit-optimize-contrast; }
 
+/* ── Scroll Progress Indicator ─────────────────────── */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: var(--brand-terracota);
+  z-index: 9999;
+  transition: width 0.1s;
+}
+
 /* ── Tipografía ────────────────────────────────────── */
 h1 { font-size: clamp(2rem, 5vw, 4rem); font-weight: 800; letter-spacing: -0.05em; line-height: 1.02; }
 h2 { font-size: clamp(1.5rem, 3vw, 2.4rem); font-weight: 700; letter-spacing: -0.04em; line-height: 1.1; }
@@ -119,18 +131,88 @@ h3 { font-size: 1.125rem; font-weight: 700; letter-spacing: -0.02em; }
 .text-muted { color: var(--text-secondary); }
 .text-amber { color: var(--brand-terracota); }
 
-/* ── Layout ────────────────────────────────────────── */
+/* ── Utilities ─────────────────────────────────────── */
 .container {
   width: 100%;
-  max-width: 1160px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 1.5rem;
 }
 
-@media (min-width: 640px)  { .container { padding: 0 1.5rem; } }
-@media (min-width: 1024px) { .container { padding: 0 2rem; } }
+.reveal {
+  opacity: 0;
+  transform: translateY(24px) scale(0.98);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
 
 .hidden { display: none !important; }
+
+@media (max-width: 768px) {
+  .hide-sm { display: none !important; }
+}
+
+/* ── Footer Premium ────────────────────────────────── */
+.site-footer {
+  background: var(--brand-brown);
+  color: rgba(255,255,255,0.7);
+  padding: 4rem 0 2rem;
+  font-size: 0.875rem;
+}
+.site-footer a {
+  color: rgba(255,255,255,0.7);
+  transition: color 0.2s;
+}
+.site-footer a:hover {
+  color: #fff;
+}
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.footer-brand {
+  max-width: 320px;
+}
+.footer-logo {
+  height: 60px;
+  filter: brightness(0) invert(1);
+  margin-bottom: 1rem;
+}
+.footer-social {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.05);
+  transition: background 0.2s, transform 0.2s var(--spring);
+}
+.footer-social a:hover {
+  background: rgba(255,255,255,0.15);
+  transform: scale(1.1);
+}
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
 
 /* ── iOS Glass Card ────────────────────────────────── */
 .ios-card {
@@ -298,10 +380,25 @@ h3 { font-size: 1.125rem; font-weight: 700; letter-spacing: -0.02em; }
   border-radius: var(--r-pill);
   transition: color 0.15s, background 0.15s;
   white-space: nowrap;
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--brand-terracota);
+  transition: width 0.3s var(--spring), left 0.3s var(--spring);
 }
 .nav-link:hover {
   color: var(--brand-terracota-dark);
   background: var(--brand-tint);
+}
+.nav-link:hover::after {
+  width: 80%;
+  left: 10%;
 }
 
 /* ── Bento Grid ────────────────────────────────────── */
@@ -334,7 +431,7 @@ h3 { font-size: 1.125rem; font-weight: 700; letter-spacing: -0.02em; }
 }
 @media (min-width: 768px) { .bento-lg { padding: 2rem; } }
 .bento-lg:hover {
-  transform: translateY(-6px) scale(1.01);
+  transform: translateY(-6px) scale(1.01) rotate(0.5deg);
   box-shadow: var(--shadow-lg);
   border-color: rgba(224,111,43,0.3);
 }
@@ -369,8 +466,21 @@ h3 { font-size: 1.125rem; font-weight: 700; letter-spacing: -0.02em; }
 }
 .cat-card-img {
   aspect-ratio: 4 / 3;
-  background: var(--bg-tertiary);
+  background: transparent;
   overflow: hidden;
+  position: relative;
+}
+.cat-card-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(224,111,43,0.2) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.4s var(--spring);
+  pointer-events: none;
+}
+.cat-card:hover .cat-card-img::after {
+  opacity: 1;
 }
 .cat-card-img img {
   width: 100%; height: 100%;
