@@ -247,10 +247,11 @@
       <!-- Background Swiper Slider -->
       <div class="swiper hero-swiper" style="position:absolute !important; inset:0; z-index:0; pointer-events:none; height:100%; width:100%;">
         <div class="swiper-wrapper" style="height:100%; width:100%;">
-          <div class="swiper-slide" style="background:url('assets/images/hero_bg.png') center/cover no-repeat; filter:brightness(0.45) saturate(0.8); height:100%; width:100%;"></div>
-          <div class="swiper-slide" style="background:url('assets/images/hero_herramientas.png') center/cover no-repeat; filter:brightness(0.45) saturate(0.8); height:100%; width:100%;"></div>
-          <div class="swiper-slide" style="background:url('assets/images/hero_obra.png') center/cover no-repeat; filter:brightness(0.45) saturate(0.8); height:100%; width:100%;"></div>
-          <div class="swiper-slide" style="background:url('assets/images/hero_materiales.png') center/cover no-repeat; filter:brightness(0.45) saturate(0.8); height:100%; width:100%;"></div>
+          <!-- FOTOS REALES DEL LOCAL -->
+          <div class="swiper-slide" style="background:url('assets/images/real_mostrador_ferreteria.png') center/cover no-repeat; filter:brightness(0.45) saturate(0.8); height:100%; width:100%;"></div>
+          <div class="swiper-slide" style="background:url('assets/images/real_deposito_exterior.png') center/cover no-repeat; filter:brightness(0.45) saturate(0.8); height:100%; width:100%;"></div>
+          <div class="swiper-slide" style="background:url('assets/images/real_ladrillos_deposito.png') center/cover no-repeat; filter:brightness(0.45) saturate(0.8); height:100%; width:100%;"></div>
+          <div class="swiper-slide" style="background:url('assets/images/real_deposito_interior.png') center/cover no-repeat; filter:brightness(0.45) saturate(0.8); height:100%; width:100%;"></div>
         </div>
       </div>
 
@@ -441,7 +442,7 @@
             <div class="swiper-slide" style="height:auto;">
               <article class="cat-card" aria-label="Construcción">
                 <div class="cat-card-img">
-                  <img src="assets/images/cat_construccion.png" alt="Materiales de construcción: cemento, ladrillos, arena" width="400" height="300" loading="lazy" />
+                  <img src="assets/images/real_ladrillos_deposito.png" alt="Stock de ladrillos Cerablock y materiales de construcción en depósito" width="400" height="300" loading="lazy" />
                 </div>
                 <div class="cat-card-body">
                   <div>
@@ -459,7 +460,7 @@
             <div class="swiper-slide" style="height:auto;">
               <article class="cat-card" aria-label="Herramientas">
                 <div class="cat-card-img">
-                  <img src="assets/images/cat_herramientas.png" alt="Herramientas manuales, eléctricas y accesorios" width="400" height="300" loading="lazy" />
+                  <img src="assets/images/real_mostrador_ferreteria.png" alt="Mostrador de ferretería con herramientas, accesorios y atención personalizada" width="400" height="300" loading="lazy" />
                 </div>
                 <div class="cat-card-body">
                   <div>
@@ -477,7 +478,7 @@
             <div class="swiper-slide" style="height:auto;">
               <article class="cat-card" aria-label="Pinturas">
                 <div class="cat-card-img">
-                  <img src="assets/images/cat_pinturas.png" alt="Pinturas para interior, exterior e impermeabilizantes" width="400" height="300" loading="lazy" />
+                  <img src="assets/images/real_pinturas_stock.png" alt="Stock real de pinturas y membranas impermeabilizantes en Viento Sur" width="400" height="300" loading="lazy" />
                 </div>
                 <div class="cat-card-body">
                   <div>
@@ -579,35 +580,47 @@
             </div>
           </div>
 
-          <!-- Visual Schedule Card -->
-          <div class="reveal bento-lg bento-featured" data-delay="100" style="align-self:start; display:flex; flex-direction:column; gap:1.5rem;">
-            
-            <div style="display:flex; align-items:center; gap:0.75rem; padding-bottom:1rem; border-bottom:1px solid var(--border);">
-              <div style="width:40px; height:40px; border-radius:var(--r-md); background:linear-gradient(135deg, var(--amber-tint) 0%, rgba(224,111,43,0.12) 100%); color:var(--amber-dark); display:flex; align-items:center; justify-content:center; border:1px solid rgba(224,111,43,0.25);">
-                <i data-lucide="clock" style="width:20px; height:20px;" aria-hidden="true"></i>
-              </div>
-              <div>
-                <h3 style="font-size:1.125rem; font-weight:700; color:var(--foreground); margin:0;">Horarios de Atención</h3>
-                <p style="font-size:0.8125rem; color:var(--muted-foreground); margin:0;">Abiertos de Lunes a Sábado</p>
+          <!-- Foto Real del Depósito — PRUEBA DE STOCK REAL -->
+          <div class="reveal" data-delay="80" style="display:flex; flex-direction:column; gap:1.5rem;">
+            <!-- Real photo card -->
+            <div style="border-radius:var(--r-xl); overflow:hidden; box-shadow:var(--shadow-md); border:1px solid var(--glass-border); position:relative;">
+              <img src="assets/images/real_deposito_interior.png"
+                   alt="Interior del depósito de Viento Sur Materiales en Paso de Indios, con stock completo de materiales de construcción"
+                   width="800" height="450" loading="lazy"
+                   style="width:100%; height:240px; object-fit:cover; display:block;">
+              <!-- Label pill -->
+              <div style="position:absolute; bottom:12px; left:12px; background:rgba(0,0,0,0.65); backdrop-filter:blur(10px); padding:5px 14px; border-radius:999px; border:1px solid rgba(255,255,255,0.15);">
+                <span style="color:#fff; font-size:0.75rem; font-weight:600; letter-spacing:0.03em;">📦 Nuestro depósito · Paso de Indios</span>
               </div>
             </div>
 
-            <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:1rem;">
-              <li style="display:flex; justify-content:space-between; align-items:center;">
-                <span style="font-weight:600; color:var(--foreground);">Lunes a Viernes</span>
-                <span style="font-family:'JetBrains Mono', monospace; font-size:0.875rem; color:var(--text-primary); background:var(--bg-primary); padding:4px 10px; border-radius:6px; border:1px solid var(--separator);">08:00 – 19:30</span>
-              </li>
-              <li style="display:flex; justify-content:space-between; align-items:center;">
-                <span style="font-weight:600; color:var(--foreground);">Sábados</span>
-                <span style="font-family:'JetBrains Mono', monospace; font-size:0.875rem; color:var(--text-primary); background:var(--bg-primary); padding:4px 10px; border-radius:6px; border:1px solid var(--separator);">08:00 – 12:30</span>
-              </li>
-            </ul>
-
-            <div style="margin-top:0.5rem; padding-top:1.5rem; border-top:1px solid var(--border); display:flex; align-items:center; gap:0.75rem;">
-              <div style="width:32px; height:32px; border-radius:50%; background:rgba(217,119,6,0.1); color:var(--primary); display:flex; align-items:center; justify-content:center;">
-                <i data-lucide="map-pin" style="width:16px; height:16px;" aria-hidden="true"></i>
+            <!-- Visual Schedule Card -->
+            <div class="bento-lg bento-featured" style="align-self:start; display:flex; flex-direction:column; gap:1.5rem;">
+              <div style="display:flex; align-items:center; gap:0.75rem; padding-bottom:1rem; border-bottom:1px solid var(--border);">
+                <div style="width:40px; height:40px; border-radius:var(--r-md); background:linear-gradient(135deg, var(--amber-tint) 0%, rgba(224,111,43,0.12) 100%); color:var(--amber-dark); display:flex; align-items:center; justify-content:center; border:1px solid rgba(224,111,43,0.25);">
+                  <i data-lucide="clock" style="width:20px; height:20px;" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <h3 style="font-size:1.125rem; font-weight:700; color:var(--foreground); margin:0;">Horarios de Atención</h3>
+                  <p style="font-size:0.8125rem; color:var(--muted-foreground); margin:0;">Abiertos de Lunes a Sábado</p>
+                </div>
               </div>
-              <span style="font-size:0.875rem; font-weight:500; color:var(--foreground);">Paso de Indios, Chubut, Argentina</span>
+              <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:1rem;">
+                <li style="display:flex; justify-content:space-between; align-items:center;">
+                  <span style="font-weight:600; color:var(--foreground);">Lunes a Viernes</span>
+                  <span style="font-family:'JetBrains Mono', monospace; font-size:0.875rem; color:var(--text-primary); background:var(--bg-primary); padding:4px 10px; border-radius:6px; border:1px solid var(--separator);">08:00 – 19:30</span>
+                </li>
+                <li style="display:flex; justify-content:space-between; align-items:center;">
+                  <span style="font-weight:600; color:var(--foreground);">Sábados</span>
+                  <span style="font-family:'JetBrains Mono', monospace; font-size:0.875rem; color:var(--text-primary); background:var(--bg-primary); padding:4px 10px; border-radius:6px; border:1px solid var(--separator);">08:00 – 12:30</span>
+                </li>
+              </ul>
+              <div style="margin-top:0.5rem; padding-top:1.5rem; border-top:1px solid var(--border); display:flex; align-items:center; gap:0.75rem;">
+                <div style="width:32px; height:32px; border-radius:50%; background:rgba(217,119,6,0.1); color:var(--primary); display:flex; align-items:center; justify-content:center;">
+                  <i data-lucide="map-pin" style="width:16px; height:16px;" aria-hidden="true"></i>
+                </div>
+                <span style="font-size:0.875rem; font-weight:500; color:var(--foreground);">Paso de Indios, Chubut, Argentina</span>
+              </div>
             </div>
           </div>
         </div>
