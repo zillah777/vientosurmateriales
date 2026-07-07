@@ -161,7 +161,7 @@ if (navbar) {
   }, { passive: true });
 }
 
-// ── 6. Video Autoplay Booster & Scroll Progress ──────────── //
+// ── 6. Video Autoplay Booster & Scroll Progress & Live Status ── //
 window.addEventListener('DOMContentLoaded', () => {
   // Scroll Progress Indicator
   const progressBar = document.getElementById('scroll-progress');
@@ -177,13 +177,11 @@ window.addEventListener('DOMContentLoaded', () => {
   // Video Autoplay Booster
   const video = document.getElementById('construction-video');
   if (video) {
-    // Explicit play request (must be muted to succeed)
     video.muted = true;
     const playPromise = video.play();
     if (playPromise !== undefined) {
       playPromise.catch(error => {
         console.warn('Autoplay prevented. Retrying on user interaction.', error);
-        // Play fallback on first user interaction if blocked
         const playOnInteraction = () => {
           video.play();
           document.removeEventListener('click', playOnInteraction);
@@ -194,5 +192,104 @@ window.addEventListener('DOMContentLoaded', () => {
       });
     }
   }
+
+  // Live Hours Status Indicator
+  updateStoreStatus();
+  setInterval(updateStoreStatus, 60000); // Check every minute
 });
+
+function getArgentinaDateTime() {
+  const now = new Date();
+  try {
+    const formatter = new Intl.DateTimeFormat('en-US', {
+      timeZone: 'America/Argentina/Buenos_Aires',
+      year: 'numeric', month: 'numeric', day: 'numeric',
+      hour: 'numeric', minute: 'numeric', second: 'numeric',
+      hour12: false
+    });
+    const parts = formatter.formatToParts(now);
+    const dateValues = {};
+    parts.forEach(p => {
+      dateValues[p.type] = p.value;
+    });
+    const arYear = parseInt(dateValues.year, 10);
+    const arMonth = parseInt(dateValues.month, 10) - 1;
+    const arDay = parseInt(dateValues.day, 10);
+    const arHour = parseInt(dateValues.hour, 10);
+    const arMinute = parseInt(dateValues.minute, 10);
+    
+    const arDate = new Date(arYear, arMonth, arDay, arHour, arMinute);
+    const dayOfWeek = arDate.getDay();
+    return { hour: arHour, minute: arMinute, dayOfWeek };
+  } catch (e) {
+    return { hour: now.getHours(), minute: now.getMinutes(), dayOfWeek: now.getDay() };
+  }
+}
+
+function updateStoreStatus() {
+  const topStatus = document.getElementById('live-status-top');
+  const schedStatus = document.getElementById('live-status-schedule');
+  if (!topStatus && !schedStatus) return;
+
+  const arTime = getArgentinaDateTime();
+  const day = arTime.dayOfWeek;
+  const hour = arTime.hour;
+  const minute = arTime.minute;
+  const totalMinutes = hour * 60 + minute;
+
+  let isOpen = false;
+  let closingInfo = "";
+  let openingInfo = "";
+
+  const openTime = 8 * 60; // 08:00
+  const closeTimeWeek = 19 * 60 + 30; // 19:30
+  const closeTimeSat = 12 * 60 + 30; // 12:30
+
+  if (day >= 1 && day <= 5) {
+    if (totalMinutes >= openTime && totalMinutes < closeTimeWeek) {
+      isOpen = true;
+      closingInfo = "cierra a las 19:30";
+    } else {
+      isOpen = false;
+      if (totalMinutes < openTime) {
+        openingInfo = "abre hoy a las 08:00";
+      } else {
+        openingInfo = day === 5 ? "abre mañana a las 08:00" : "abre mañana a las 08:00";
+      }
+    }
+  } else if (day === 6) {
+    if (totalMinutes >= openTime && totalMinutes < closeTimeSat) {
+      isOpen = true;
+      closingInfo = "cierra a las 12:30";
+    } else {
+      isOpen = false;
+      if (totalMinutes < openTime) {
+        openingInfo = "abre hoy a las 08:00";
+      } else {
+        openingInfo = "abre el lunes a las 08:00";
+      }
+    }
+  } else {
+    isOpen = false;
+    openingInfo = "abre mañana a las 08:00";
+  }
+
+  const statusClass = isOpen ? 'status-open' : 'status-closed';
+  const statusLabel = isOpen ? 'Abierto' : 'Cerrado';
+  const detailLabel = isOpen ? ` (cierra ${closingInfo})` : ` (abre ${openingInfo})`;
+
+  [topStatus, schedStatus].forEach(el => {
+    if (!el) return;
+    const dot = el.querySelector('.status-dot');
+    const textSpan = el.querySelector('span:last-child');
+    
+    if (dot) {
+      dot.className = 'status-dot ' + statusClass;
+    }
+    if (textSpan) {
+      textSpan.textContent = `${statusLabel}${detailLabel}`;
+    }
+  });
+}
+
 
