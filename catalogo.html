@@ -299,7 +299,6 @@
       justify-content: center;
       gap: 7px;
       margin-top: auto;
-      padding-top: 0.875rem;
       padding: 0.7rem 1rem;
       margin-top: 0.75rem;
       border-radius: var(--r-md);
@@ -311,12 +310,26 @@
       text-decoration: none;
       border: none;
       cursor: pointer;
-      transition: all 0.2s var(--ease-ios);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       box-shadow: 0 4px 12px rgba(37,211,102,0.3);
     }
+    
+    @media (min-width: 769px) {
+      .btn-wa-product {
+        opacity: 0;
+        transform: translateY(10px);
+        pointer-events: none;
+      }
+      .product-card:hover .btn-wa-product {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
+    }
+
     .btn-wa-product:hover {
       background: #1da851;
-      transform: translateY(-1px);
+      transform: translateY(-2px) !important;
       box-shadow: 0 6px 20px rgba(37,211,102,0.45);
     }
     .btn-wa-product svg { flex-shrink: 0; }
@@ -559,7 +572,7 @@
 
           <article class="product-card reveal" data-category="hierros" data-name="Hierro Nervado 6mm Acindar" data-delay="0">
             <div class="product-img-wrap">
-              <img src="assets/images/cat_hierros.png" alt="Hierro Nervado 6mm x 12mts Acindar" loading="lazy" width="400" height="200" />
+              <img src="assets/images/prod_hierro6.jfif" alt="Hierro Nervado 6mm x 12mts Acindar" loading="lazy" width="400" height="200" />
               <span class="cat-badge-card badge-hierros">🏗️ Hierros</span>
               <span class="stock-tag"><span class="stock-dot"></span>Stock</span>
             </div>
@@ -576,7 +589,7 @@
 
           <article class="product-card reveal" data-category="hierros" data-name="Hierro Nervado 8mm Acindar" data-delay="60">
             <div class="product-img-wrap">
-              <img src="assets/images/cat_hierros.png" alt="Hierro Nervado 8mm x 12mts Acindar" loading="lazy" width="400" height="200" />
+              <img src="assets/images/prod_hierro8.jfif" alt="Hierro Nervado 8mm x 12mts Acindar" loading="lazy" width="400" height="200" />
               <span class="cat-badge-card badge-hierros">🏗️ Hierros</span>
               <span class="stock-tag"><span class="stock-dot"></span>Stock</span>
             </div>
@@ -593,7 +606,7 @@
 
           <article class="product-card reveal" data-category="hierros" data-name="Hierro Nervado 10mm Acindar" data-delay="120">
             <div class="product-img-wrap">
-              <img src="assets/images/cat_hierros.png" alt="Hierro Nervado 10mm x 12mts Acindar" loading="lazy" width="400" height="200" />
+              <img src="assets/images/prod_hierro10.jfif" alt="Hierro Nervado 10mm x 12mts Acindar" loading="lazy" width="400" height="200" />
               <span class="cat-badge-card badge-hierros">🏗️ Hierros</span>
               <span class="stock-tag"><span class="stock-dot"></span>Stock</span>
             </div>
@@ -610,7 +623,7 @@
 
           <article class="product-card reveal" data-category="hierros" data-name="Hierro Nervado 12mm Acindar" data-delay="180">
             <div class="product-img-wrap">
-              <img src="assets/images/cat_hierros.png" alt="Hierro Nervado 12mm x 12mts Acindar" loading="lazy" width="400" height="200" />
+              <img src="assets/images/prod_hierro12.jfif" alt="Hierro Nervado 12mm x 12mts Acindar" loading="lazy" width="400" height="200" />
               <span class="cat-badge-card badge-hierros">🏗️ Hierros</span>
               <span class="stock-tag"><span class="stock-dot"></span>Stock</span>
             </div>
@@ -629,7 +642,7 @@
 
           <article class="product-card reveal" data-category="cemento" data-name="Cemento Comodoro 2000 PCR 25kg" data-delay="0">
             <div class="product-img-wrap">
-              <img src="assets/images/cat_cemento.png" alt="Cemento Comodoro 2000 x 25 kg PCR" loading="lazy" width="400" height="200" />
+              <img src="assets/images/prod_cemento_comodoro.jfif" alt="Cemento Comodoro 2000 x 25 kg PCR" loading="lazy" width="400" height="200" />
               <span class="cat-badge-card badge-cemento">🧱 Cemento</span>
               <span class="stock-tag"><span class="stock-dot"></span>Stock</span>
             </div>
@@ -646,7 +659,7 @@
 
           <article class="product-card reveal" data-category="cemento" data-name="Caltex PCR 25kg" data-delay="60">
             <div class="product-img-wrap">
-              <img src="assets/images/cat_cemento.png" alt="Caltex x 25 kg PCR" loading="lazy" width="400" height="200" />
+              <img src="assets/images/prod_caltex.jfif" alt="Caltex x 25 kg PCR" loading="lazy" width="400" height="200" />
               <span class="cat-badge-card badge-cemento">🧱 Cemento</span>
               <span class="stock-tag"><span class="stock-dot"></span>Stock</span>
             </div>
@@ -663,7 +676,7 @@
 
           <article class="product-card reveal" data-category="cemento" data-name="Cal Sarmiento 25kg" data-delay="120">
             <div class="product-img-wrap">
-              <img src="assets/images/cat_cemento.png" alt="Cal Sarmiento x 25 kg" loading="lazy" width="400" height="200" />
+              <img src="assets/images/prod_cal_sarmiento.webp" alt="Cal Sarmiento x 25 kg" loading="lazy" width="400" height="200" />
               <span class="cat-badge-card badge-cemento">🧱 Cal</span>
               <span class="stock-tag"><span class="stock-dot"></span>Stock</span>
             </div>
@@ -682,7 +695,7 @@
 
           <article class="product-card reveal" data-category="pinturas-frente" data-name="Latex Color Frente 4 Litros Castel Bianco" data-delay="0">
             <div class="product-img-wrap">
-              <img src="assets/images/real_pinturas_stock.png" alt="Látex Color Frente x 4 Lts Castel Bianco" loading="lazy" width="400" height="200" />
+              <img src="assets/images/prod_latex_color_frente.jfif" alt="Látex Color Frente x 4 Lts Castel Bianco" loading="lazy" width="400" height="200" />
               <span class="cat-badge-card badge-pinturas">🎨 Pinturas Frente</span>
               <span class="stock-tag"><span class="stock-dot"></span>Stock</span>
             </div>
@@ -699,7 +712,7 @@
 
           <article class="product-card reveal" data-category="pinturas-frente" data-name="Latex Color Frente 10 Litros Castel Bianco" data-delay="60">
             <div class="product-img-wrap">
-              <img src="assets/images/real_pinturas_stock.png" alt="Látex Color Frente x 10 Lts Castel Bianco" loading="lazy" width="400" height="200" />
+              <img src="assets/images/prod_latex_color_frente.jfif" alt="Látex Color Frente x 10 Lts Castel Bianco" loading="lazy" width="400" height="200" />
               <span class="cat-badge-card badge-pinturas">🎨 Pinturas Frente</span>
               <span class="stock-tag"><span class="stock-dot"></span>Stock</span>
             </div>
@@ -718,7 +731,7 @@
 
           <article class="product-card reveal" data-category="pinturas-interior" data-name="Latex Interior Profesional 1 Litro Petrolatex" data-delay="0">
             <div class="product-img-wrap">
-              <img src="assets/images/cat_pinturas_latex.png" alt="Látex Interior Profesional x 1 Lt Petrolatex" loading="lazy" width="400" height="200" />
+              <img src="assets/images/prod_petrolatex.jfif" alt="Látex Interior Profesional x 1 Lt Petrolatex" loading="lazy" width="400" height="200" />
               <span class="cat-badge-card badge-pinturas">🎨 Interior</span>
               <span class="stock-tag"><span class="stock-dot"></span>Stock</span>
             </div>
@@ -735,7 +748,7 @@
 
           <article class="product-card reveal" data-category="pinturas-interior" data-name="Latex Interior Profesional 4 Litros Petrolatex" data-delay="60">
             <div class="product-img-wrap">
-              <img src="assets/images/cat_pinturas_latex.png" alt="Látex Interior Profesional x 4 Lts Petrolatex" loading="lazy" width="400" height="200" />
+              <img src="assets/images/prod_petrolatex.jfif" alt="Látex Interior Profesional x 4 Lts Petrolatex" loading="lazy" width="400" height="200" />
               <span class="cat-badge-card badge-pinturas">🎨 Interior</span>
               <span class="stock-tag"><span class="stock-dot"></span>Stock</span>
             </div>
@@ -752,7 +765,7 @@
 
           <article class="product-card reveal" data-category="pinturas-interior" data-name="Latex Interior Profesional 10 Litros Petrolatex" data-delay="120">
             <div class="product-img-wrap">
-              <img src="assets/images/cat_pinturas_latex.png" alt="Látex Interior Profesional x 10 Lts Petrolatex" loading="lazy" width="400" height="200" />
+              <img src="assets/images/prod_petrolatex.jfif" alt="Látex Interior Profesional x 10 Lts Petrolatex" loading="lazy" width="400" height="200" />
               <span class="cat-badge-card badge-pinturas">🎨 Interior</span>
               <span class="stock-tag"><span class="stock-dot"></span>Stock</span>
             </div>
@@ -769,7 +782,7 @@
 
           <article class="product-card reveal" data-category="pinturas-interior" data-name="Latex Interior Profesional 20 Litros Petrolatex" data-delay="180">
             <div class="product-img-wrap">
-              <img src="assets/images/cat_pinturas_latex.png" alt="Látex Interior Profesional x 20 Lts Petrolatex" loading="lazy" width="400" height="200" />
+              <img src="assets/images/prod_petrolatex.jfif" alt="Látex Interior Profesional x 20 Lts Petrolatex" loading="lazy" width="400" height="200" />
               <span class="cat-badge-card badge-pinturas">🎨 Interior</span>
               <span class="stock-tag"><span class="stock-dot"></span>Stock</span>
             </div>
@@ -788,7 +801,7 @@
 
           <article class="product-card reveal" data-category="pinturas-exterior" data-name="Latex Exterior Profesional 1 Litro Petrolatex" data-delay="0">
             <div class="product-img-wrap">
-              <img src="assets/images/cat_pinturas_latex.png" alt="Látex Exterior Profesional x 1 Lt Petrolatex" loading="lazy" width="400" height="200" />
+              <img src="assets/images/prod_petrolatex.jfif" alt="Látex Exterior Profesional x 1 Lt Petrolatex" loading="lazy" width="400" height="200" />
               <span class="cat-badge-card badge-pinturas">🎨 Exterior</span>
               <span class="stock-tag"><span class="stock-dot"></span>Stock</span>
             </div>
@@ -805,7 +818,7 @@
 
           <article class="product-card reveal" data-category="pinturas-exterior" data-name="Latex Exterior Profesional 4 Litros Petrolatex" data-delay="60">
             <div class="product-img-wrap">
-              <img src="assets/images/cat_pinturas_latex.png" alt="Látex Exterior Profesional x 4 Lts Petrolatex" loading="lazy" width="400" height="200" />
+              <img src="assets/images/prod_petrolatex.jfif" alt="Látex Exterior Profesional x 4 Lts Petrolatex" loading="lazy" width="400" height="200" />
               <span class="cat-badge-card badge-pinturas">🎨 Exterior</span>
               <span class="stock-tag"><span class="stock-dot"></span>Stock</span>
             </div>
@@ -822,7 +835,7 @@
 
           <article class="product-card reveal" data-category="pinturas-exterior" data-name="Latex Exterior Profesional 10 Litros Petrolatex" data-delay="120">
             <div class="product-img-wrap">
-              <img src="assets/images/cat_pinturas_latex.png" alt="Látex Exterior Profesional x 10 Lts Petrolatex" loading="lazy" width="400" height="200" />
+              <img src="assets/images/prod_petrolatex.jfif" alt="Látex Exterior Profesional x 10 Lts Petrolatex" loading="lazy" width="400" height="200" />
               <span class="cat-badge-card badge-pinturas">🎨 Exterior</span>
               <span class="stock-tag"><span class="stock-dot"></span>Stock</span>
             </div>
@@ -839,7 +852,7 @@
 
           <article class="product-card reveal" data-category="pinturas-exterior" data-name="Latex Exterior Profesional 20 Litros Petrolatex" data-delay="180">
             <div class="product-img-wrap">
-              <img src="assets/images/cat_pinturas_latex.png" alt="Látex Exterior Profesional x 20 Lts Petrolatex" loading="lazy" width="400" height="200" />
+              <img src="assets/images/prod_petrolatex.jfif" alt="Látex Exterior Profesional x 20 Lts Petrolatex" loading="lazy" width="400" height="200" />
               <span class="cat-badge-card badge-pinturas">🎨 Exterior</span>
               <span class="stock-tag"><span class="stock-dot"></span>Stock</span>
             </div>
@@ -858,7 +871,7 @@
 
           <article class="product-card reveal" data-category="ladrillos" data-name="Ladrillo Ceramico 12x18x33" data-delay="0">
             <div class="product-img-wrap">
-              <img src="assets/images/real_ladrillos_deposito.png" alt="Ladrillo Cerámico 12x18x33 cm" loading="lazy" width="400" height="200" />
+              <img src="assets/images/prod_ladrillo12.jfif" alt="Ladrillo Cerámico 12x18x33 cm" loading="lazy" width="400" height="200" />
               <span class="cat-badge-card badge-ladrillos">🧱 Ladrillos</span>
               <span class="stock-tag"><span class="stock-dot"></span>Stock</span>
             </div>
@@ -875,7 +888,7 @@
 
           <article class="product-card reveal" data-category="ladrillos" data-name="Ladrillo Ceramico 18x18x33" data-delay="60">
             <div class="product-img-wrap">
-              <img src="assets/images/real_ladrillos_deposito.png" alt="Ladrillo Cerámico 18x18x33 cm" loading="lazy" width="400" height="200" />
+              <img src="assets/images/prod_ladrillo18.jfif" alt="Ladrillo Cerámico 18x18x33 cm" loading="lazy" width="400" height="200" />
               <span class="cat-badge-card badge-ladrillos">🧱 Ladrillos</span>
               <span class="stock-tag"><span class="stock-dot"></span>Stock</span>
             </div>
