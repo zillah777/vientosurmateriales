@@ -138,6 +138,12 @@ h3 { font-size: 1.125rem; font-weight: 700; letter-spacing: -0.02em; }
   margin: 0 auto;
   padding: 0 1.5rem;
 }
+@media (max-width: 768px) {
+  .container { padding: 0 1.25rem; }
+}
+@media (max-width: 480px) {
+  .container { padding: 0 1rem; }
+}
 
 .reveal {
   opacity: 0;
@@ -153,8 +159,63 @@ h3 { font-size: 1.125rem; font-weight: 700; letter-spacing: -0.02em; }
 
 .hidden { display: none !important; }
 
+/* ✨ Topbar ✨ */
+.topbar-wrapper {
+  background: var(--brand-brown);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding: 6px 0;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.9);
+  position: relative;
+}
+.topbar-bg {
+  position: absolute;
+  inset: 0;
+  background: rgba(75,46,36,0.95);
+  backdrop-filter: blur(10px);
+  z-index: -1;
+}
+.topbar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.topbar-left, .topbar-right, .topbar-hours {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+.topbar-hours { gap: 8px; }
+.topbar-hours-text, .topbar-location, .topbar-email {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.icon-sm { width: 14px; height: 14px; }
+.topbar-social {
+  display: flex;
+  gap: 12px;
+  border-left: 1px solid rgba(255,255,255,0.25);
+  padding-left: 1.25rem;
+}
+.social-link {
+  color: rgba(255,255,255,0.9);
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.social-link:hover { color: #fff; transform: scale(1.15); }
+.topbar-email:hover { color: #fff; }
+
 @media (max-width: 768px) {
   .hide-sm { display: none !important; }
+  .topbar-inner { justify-content: center; }
+  .topbar-right { display: none !important; } /* Hide social and email on small screens */
 }
 
 /* ── Footer Premium ────────────────────────────────── */
