@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap');
 
 /* ═══════════════════════════════════════════════════════════════
    VIENTO SUR MATERIALES — DESIGN SYSTEM
@@ -116,16 +116,17 @@ img { image-rendering: -webkit-optimize-contrast; }
   top: 0;
   left: 0;
   width: 0%;
-  height: 3px;
-  background: var(--brand-terracota);
+  height: 4px;
+  background: linear-gradient(90deg, var(--brand-terracota) 0%, #f0a060 40%, var(--brand-terracota-dark) 100%);
   z-index: 9999;
   transition: width 0.1s;
+  box-shadow: 0 0 12px rgba(224,111,43,0.5);
 }
 
 /* ── Tipografía ────────────────────────────────────── */
-h1 { font-size: clamp(2rem, 5vw, 4rem); font-weight: 800; letter-spacing: -0.05em; line-height: 1.02; }
-h2 { font-size: clamp(1.5rem, 3vw, 2.4rem); font-weight: 700; letter-spacing: -0.04em; line-height: 1.1; }
-h3 { font-size: 1.125rem; font-weight: 700; letter-spacing: -0.02em; }
+h1 { font-family: 'Outfit', 'Inter', sans-serif; font-size: clamp(2rem, 5vw, 4rem); font-weight: 800; letter-spacing: -0.05em; line-height: 1.02; }
+h2 { font-family: 'Outfit', 'Inter', sans-serif; font-size: clamp(1.5rem, 3vw, 2.4rem); font-weight: 700; letter-spacing: -0.05em; line-height: 1.08; }
+h3 { font-family: 'Outfit', 'Inter', sans-serif; font-size: 1.125rem; font-weight: 700; letter-spacing: -0.02em; }
 
 .font-mono { font-family: 'JetBrains Mono', 'SF Mono', monospace; }
 .text-muted { color: var(--text-secondary); }
@@ -481,15 +482,32 @@ h3 { font-size: 1.125rem; font-weight: 700; letter-spacing: -0.02em; }
   .bento-item-8 { grid-column: span 8; }
 }
 
-/* iOS Bento card */
+/* iOS Bento card — Aurora Border */
 .bento-lg {
   background: var(--bg-secondary);
   border-radius: var(--r-xl);
   border: 1px solid var(--glass-border);
   padding: 1.5rem;
   box-shadow: var(--shadow-sm);
-  transition: transform 0.4s var(--spring), box-shadow 0.3s var(--ease-ios), border-color 0.2s;
+  transition: transform 0.4s var(--spring), box-shadow 0.3s var(--ease-ios), border-color 0.3s;
+  position: relative;
 }
+.bento-lg::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1.5px;
+  background: linear-gradient(135deg, transparent 30%, rgba(224,111,43,0.25) 50%, rgba(240,160,96,0.2) 70%, transparent 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s var(--ease-ios);
+  pointer-events: none;
+}
+.bento-lg:hover::before { opacity: 1; }
 @media (min-width: 768px) { .bento-lg { padding: 2rem; } }
 .bento-lg:hover {
   transform: translateY(-6px) scale(1.01) rotate(0.5deg);
@@ -624,12 +642,12 @@ h3 { font-size: 1.125rem; font-weight: 700; letter-spacing: -0.02em; }
   transform: scale(1.08);
 }
 
-/* ── FAB WhatsApp ──────────────────────────────────── */
+/* ── FAB WhatsApp — Premium Pulse ──────────────────── */
 .fab-wa {
   position: fixed;
   bottom: 24px; right: 24px;
-  width: 58px; height: 58px;
-  background: #25D366;
+  width: 60px; height: 60px;
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
   border-radius: var(--r-pill);
   display: flex; align-items: center; justify-content: center;
   color: #fff;
@@ -637,9 +655,55 @@ h3 { font-size: 1.125rem; font-weight: 700; letter-spacing: -0.02em; }
   z-index: 100;
   transition: transform 0.3s var(--spring), box-shadow 0.3s;
 }
+.fab-wa::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: var(--r-pill);
+  border: 2px solid rgba(37,211,102,0.4);
+  animation: fab-ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+@keyframes fab-ping {
+  0% { transform: scale(1); opacity: 0.7; }
+  75%, 100% { transform: scale(1.35); opacity: 0; }
+}
 .fab-wa:hover {
   transform: scale(1.1) translateY(-2px);
   box-shadow: 0 10px 36px rgba(37,211,102,0.45);
+}
+.fab-wa:hover::before { animation: none; opacity: 0; }
+
+/* FAB Tooltip */
+.fab-wa-tooltip {
+  position: absolute;
+  right: 72px;
+  top: 50%;
+  transform: translateY(-50%) translateX(8px);
+  background: #fff;
+  color: var(--text-primary);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-md);
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s, transform 0.25s var(--spring);
+}
+.fab-wa-tooltip::after {
+  content: '';
+  position: absolute;
+  right: -5px;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  width: 10px; height: 10px;
+  background: #fff;
+  box-shadow: 2px -2px 3px rgba(0,0,0,0.04);
+}
+.fab-wa:hover .fab-wa-tooltip {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
 }
 
 /* ── Hero decorative line ──────────────────────────── */
@@ -884,5 +948,113 @@ h3 { font-size: 1.125rem; font-weight: 700; letter-spacing: -0.02em; }
 }
 .hero-swiper .swiper-slide-active {
   animation: kenburns 14s ease-in-out infinite;
+}
+
+/* ── Noise / Grain Texture (Stripe-like) ───────────── */
+.noise-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.015;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ── Hero Ambient Light Spotlights ─────────────────── */
+.hero-spotlight-1 {
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 50vw;
+  height: 50vw;
+  background: radial-gradient(circle, rgba(224,111,43,0.18) 0%, transparent 70%);
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 1;
+}
+.hero-spotlight-2 {
+  position: absolute;
+  bottom: -20%;
+  right: -10%;
+  width: 60vw;
+  height: 60vw;
+  background: radial-gradient(circle, rgba(75,46,36,0.25) 0%, transparent 70%);
+  filter: blur(100px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ── Footer Top Premium Accent ─────────────────────── */
+.footer-top-accent {
+  position: relative;
+  height: 6px;
+  background: linear-gradient(90deg, var(--brand-terracota) 0%, #f0a060 50%, var(--brand-brown) 100%);
+  width: 100%;
+  z-index: 10;
+}
+
+/* ── Contact Info Cards ────────────────────────────── */
+.contact-card-premium {
+  background: var(--bg-secondary);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--r-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s var(--spring), box-shadow 0.3s var(--ease-ios), border-color 0.2s;
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+.contact-card-premium:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(224,111,43,0.25);
+}
+
+/* ── Pure CSS Marquee for Reviews ──────────────────── */
+.marquee-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  padding: 1.5rem 0;
+}
+.marquee-container::before, .marquee-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 120px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+.marquee-container::before {
+  left: 0;
+  background: linear-gradient(to right, var(--bg-primary) 0%, transparent 100%);
+}
+.marquee-container::after {
+  right: 0;
+  background: linear-gradient(to left, var(--bg-primary) 0%, transparent 100%);
+}
+
+.marquee-content {
+  display: flex;
+  gap: 1.5rem;
+  width: max-content;
+  animation: marquee-scroll 25s linear infinite;
+}
+.marquee-content:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-card {
+  width: 320px;
+  flex-shrink: 0;
 }
 

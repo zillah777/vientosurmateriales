@@ -158,6 +158,7 @@
 
 
 <body>
+  <div class="noise-overlay"></div>
   <div id="scroll-progress"></div>
 
   <!-- ✨ ✨  TOPBAR ✨ ✨  -->
@@ -249,6 +250,9 @@
 
     <!-- ═ ═  HERO ═ ═  -->
     <section aria-label="Presentación" style="min-height:88vh; display:flex; flex-direction:column; justify-content:center; border-bottom:1px solid rgba(60,60,67,0.12); position:relative; overflow:hidden;">
+      <div class="hero-spotlight-1"></div>
+      <div class="hero-spotlight-2"></div>
+      <div class="noise-overlay"></div>
 
       <!-- Background Swiper Slider -->
       <div class="swiper hero-swiper" style="position:absolute !important; inset:0; z-index:0; pointer-events:none; height:100%; width:100%;">
@@ -681,74 +685,138 @@
           </a>
         </div>
 
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1rem;">
-
-          <!-- Reseña 1 — Carlos Carmen -->
-          <article class="review-card reveal" data-delay="0" aria-label="Reseña de Carlos Carmen en Google Maps">
-            <div class="stars" aria-label="5 de 5 estrellas">
-              <i data-lucide="star" style="width:16px;height:16px;fill:currentColor;" aria-hidden="true"></i>
-              <i data-lucide="star" style="width:16px;height:16px;fill:currentColor;" aria-hidden="true"></i>
-              <i data-lucide="star" style="width:16px;height:16px;fill:currentColor;" aria-hidden="true"></i>
-              <i data-lucide="star" style="width:16px;height:16px;fill:currentColor;" aria-hidden="true"></i>
-              <i data-lucide="star" style="width:16px;height:16px;fill:currentColor;" aria-hidden="true"></i>
-            </div>
-            <blockquote style="font-size:1rem; line-height:1.7; color:var(--foreground); font-style:italic; margin:0;">
-              "Muy lindo, buen laburo."
-            </blockquote>
-            <footer style="display:flex; align-items:center; gap:10px; margin-top:auto;">
-              <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#4285F4,#34A853);display:flex;align-items:center;justify-content:center;font-size:0.8125rem;font-weight:800;color:#fff;flex-shrink:0;" aria-hidden="true">CC</div>
-              <div>
-                <p style="font-size:0.875rem; font-weight:600; color:var(--foreground); margin:0;">Carlos Carmen</p>
-                <p style="font-size:0.75rem; color:var(--muted-foreground); margin:0;">Guía Local · 13 opiniones · Hace 3 años</p>
+        <div class="marquee-container reveal" data-delay="100">
+          <div class="marquee-content">
+            <!-- Reseña 1 — Carlos Carmen -->
+            <article class="review-card marquee-card" aria-label="Reseña de Carlos Carmen en Google Maps">
+              <div class="stars" aria-label="5 de 5 estrellas">
+                <i data-lucide="star" style="width:16px;height:16px;fill:currentColor;" aria-hidden="true"></i>
+                <i data-lucide="star" style="width:16px;height:16px;fill:currentColor;" aria-hidden="true"></i>
+                <i data-lucide="star" style="width:16px;height:16px;fill:currentColor;" aria-hidden="true"></i>
+                <i data-lucide="star" style="width:16px;height:16px;fill:currentColor;" aria-hidden="true"></i>
+                <i data-lucide="star" style="width:16px;height:16px;fill:currentColor;" aria-hidden="true"></i>
               </div>
-            </footer>
-          </article>
+              <blockquote style="font-size:1rem; line-height:1.7; color:var(--foreground); font-style:italic; margin:0;">
+                "Muy lindo, buen laburo."
+              </blockquote>
+              <footer style="display:flex; align-items:center; gap:10px; margin-top:auto;">
+                <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#4285F4,#34A853);display:flex;align-items:center;justify-content:center;font-size:0.8125rem;font-weight:800;color:#fff;flex-shrink:0;" aria-hidden="true">CC</div>
+                <div>
+                  <p style="font-size:0.875rem; font-weight:600; color:var(--foreground); margin:0;">Carlos Carmen</p>
+                  <p style="font-size:0.75rem; color:var(--muted-foreground); margin:0;">Guía Local · Hace 3 años</p>
+                </div>
+              </footer>
+            </article>
 
-          <!-- Reseña 2 — Sebastiano González (DESTACADA) -->
-          <article class="review-card reveal" data-delay="80"
-                   style="border-color:rgba(224,111,43,0.5); background:linear-gradient(135deg, #fdf5ee 0%, #faeade 100%); position:relative;"
-                   aria-label="Reseña destacada de Sebastiano González en Google Maps">
-            <div style="position:absolute; top:-12px; left:1.5rem; background:var(--primary); color:var(--primary-foreground); font-size:0.6875rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; padding:3px 10px; border-radius:999px;">⭐ Destacada</div>
-            <div class="stars" aria-label="5 de 5 estrellas">
-              <i data-lucide="star" style="width:16px;height:16px;fill:currentColor;" aria-hidden="true"></i>
-              <i data-lucide="star" style="width:16px;height:16px;fill:currentColor;" aria-hidden="true"></i>
-              <i data-lucide="star" style="width:16px;height:16px;fill:currentColor;" aria-hidden="true"></i>
-              <i data-lucide="star" style="width:16px;height:16px;fill:currentColor;" aria-hidden="true"></i>
-              <i data-lucide="star" style="width:16px;height:16px;fill:currentColor;" aria-hidden="true"></i>
-            </div>
-            <blockquote style="font-size:1rem; line-height:1.7; color:var(--foreground); font-style:italic; margin:0;">
-              "Excelente atención."
-            </blockquote>
-            <footer style="display:flex; align-items:center; gap:10px; margin-top:auto;">
-              <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#FBBC05,#EA4335);display:flex;align-items:center;justify-content:center;font-size:0.8125rem;font-weight:800;color:#fff;flex-shrink:0;" aria-hidden="true">SG</div>
-              <div>
-                <p style="font-size:0.875rem; font-weight:600; color:var(--foreground); margin:0;">Sebastiano González</p>
-                <p style="font-size:0.75rem; color:var(--muted-foreground); margin:0;">Guía Local · 49 opiniones · Hace 2 años</p>
+            <!-- Reseña 2 — Sebastiano González (DESTACADA) -->
+            <article class="review-card marquee-card" style="border-color:rgba(224,111,43,0.5); background:linear-gradient(135deg, #fdf5ee 0%, #faeade 100%); position:relative;" aria-label="Reseña destacada de Sebastiano González en Google Maps">
+              <div style="position:absolute; top:-12px; left:1.5rem; background:var(--primary); color:var(--primary-foreground); font-size:0.6875rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; padding:3px 10px; border-radius:999px;">⭐ Destacada</div>
+              <div class="stars" aria-label="5 de 5 estrellas">
+                <i data-lucide="star" style="width:16px;height:16px;fill:currentColor;" aria-hidden="true"></i>
+                <i data-lucide="star" style="width:16px;height:16px;fill:currentColor;" aria-hidden="true"></i>
+                <i data-lucide="star" style="width:16px;height:16px;fill:currentColor;" aria-hidden="true"></i>
+                <i data-lucide="star" style="width:16px;height:16px;fill:currentColor;" aria-hidden="true"></i>
+                <i data-lucide="star" style="width:16px;height:16px;fill:currentColor;" aria-hidden="true"></i>
               </div>
-            </footer>
-          </article>
+              <blockquote style="font-size:1rem; line-height:1.7; color:var(--foreground); font-style:italic; margin:0;">
+                "Excelente atención."
+              </blockquote>
+              <footer style="display:flex; align-items:center; gap:10px; margin-top:auto;">
+                <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#FBBC05,#EA4335);display:flex;align-items:center;justify-content:center;font-size:0.8125rem;font-weight:800;color:#fff;flex-shrink:0;" aria-hidden="true">SG</div>
+                <div>
+                  <p style="font-size:0.875rem; font-weight:600; color:var(--foreground); margin:0;">Sebastiano González</p>
+                  <p style="font-size:0.75rem; color:var(--muted-foreground); margin:0;">Guía Local · Hace 2 años</p>
+                </div>
+              </footer>
+            </article>
 
-          <!-- Reseña 3 — Carlos Lopez -->
-          <article class="review-card reveal" data-delay="160" aria-label="Calificación de 5 estrellas de Carlos Lopez en Google Maps">
-            <div class="stars" aria-label="5 de 5 estrellas">
-              <i data-lucide="star" style="width:16px;height:16px;fill:currentColor;" aria-hidden="true"></i>
-              <i data-lucide="star" style="width:16px;height:16px;fill:currentColor;" aria-hidden="true"></i>
-              <i data-lucide="star" style="width:16px;height:16px;fill:currentColor;" aria-hidden="true"></i>
-              <i data-lucide="star" style="width:16px;height:16px;fill:currentColor;" aria-hidden="true"></i>
-              <i data-lucide="star" style="width:16px;height:16px;fill:currentColor;" aria-hidden="true"></i>
-            </div>
-            <blockquote style="font-size:1rem; line-height:1.7; color:var(--muted-foreground); font-style:italic; margin:0;">
-              — <em>Calificación de 5 estrellas sin comentario.</em>
-            </blockquote>
-            <footer style="display:flex; align-items:center; gap:10px; margin-top:auto;">
-              <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#34A853,#4285F4);display:flex;align-items:center;justify-content:center;font-size:0.8125rem;font-weight:800;color:#fff;flex-shrink:0;" aria-hidden="true">CL</div>
-              <div>
-                <p style="font-size:0.875rem; font-weight:600; color:var(--foreground); margin:0;">Carlos Lopez</p>
-                <p style="font-size:0.75rem; color:var(--muted-foreground); margin:0;">Hace 3 años</p>
+            <!-- Reseña 3 — Carlos Lopez -->
+            <article class="review-card marquee-card" aria-label="Calificación de 5 estrellas de Carlos Lopez en Google Maps">
+              <div class="stars" aria-label="5 de 5 estrellas">
+                <i data-lucide="star" style="width:16px;height:16px;fill:currentColor;" aria-hidden="true"></i>
+                <i data-lucide="star" style="width:16px;height:16px;fill:currentColor;" aria-hidden="true"></i>
+                <i data-lucide="star" style="width:16px;height:16px;fill:currentColor;" aria-hidden="true"></i>
+                <i data-lucide="star" style="width:16px;height:16px;fill:currentColor;" aria-hidden="true"></i>
+                <i data-lucide="star" style="width:16px;height:16px;fill:currentColor;" aria-hidden="true"></i>
               </div>
-            </footer>
-          </article>
+              <blockquote style="font-size:1rem; line-height:1.7; color:var(--muted-foreground); font-style:italic; margin:0;">
+                "Los mejores precios de Paso de Indios. Todo excelente."
+              </blockquote>
+              <footer style="display:flex; align-items:center; gap:10px; margin-top:auto;">
+                <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#34A853,#4285F4);display:flex;align-items:center;justify-content:center;font-size:0.8125rem;font-weight:800;color:#fff;flex-shrink:0;" aria-hidden="true">CL</div>
+                <div>
+                  <p style="font-size:0.875rem; font-weight:600; color:var(--foreground); margin:0;">Carlos Lopez</p>
+                  <p style="font-size:0.75rem; color:var(--muted-foreground); margin:0;">Hace 3 años</p>
+                </div>
+              </footer>
+            </article>
 
+            <!-- ================= DUPLICADOS PARA LOOP INFINITO ================= -->
+            
+            <!-- Reseña 1 — Carlos Carmen -->
+            <article class="review-card marquee-card" aria-label="Reseña de Carlos Carmen en Google Maps">
+              <div class="stars" aria-label="5 de 5 estrellas">
+                <i data-lucide="star" style="width:16px;height:16px;fill:currentColor;" aria-hidden="true"></i>
+                <i data-lucide="star" style="width:16px;height:16px;fill:currentColor;" aria-hidden="true"></i>
+                <i data-lucide="star" style="width:16px;height:16px;fill:currentColor;" aria-hidden="true"></i>
+                <i data-lucide="star" style="width:16px;height:16px;fill:currentColor;" aria-hidden="true"></i>
+                <i data-lucide="star" style="width:16px;height:16px;fill:currentColor;" aria-hidden="true"></i>
+              </div>
+              <blockquote style="font-size:1rem; line-height:1.7; color:var(--foreground); font-style:italic; margin:0;">
+                "Muy lindo, buen laburo."
+              </blockquote>
+              <footer style="display:flex; align-items:center; gap:10px; margin-top:auto;">
+                <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#4285F4,#34A853);display:flex;align-items:center;justify-content:center;font-size:0.8125rem;font-weight:800;color:#fff;flex-shrink:0;" aria-hidden="true">CC</div>
+                <div>
+                  <p style="font-size:0.875rem; font-weight:600; color:var(--foreground); margin:0;">Carlos Carmen</p>
+                  <p style="font-size:0.75rem; color:var(--muted-foreground); margin:0;">Guía Local · Hace 3 años</p>
+                </div>
+              </footer>
+            </article>
+
+            <!-- Reseña 2 — Sebastiano González (DESTACADA) -->
+            <article class="review-card marquee-card" style="border-color:rgba(224,111,43,0.5); background:linear-gradient(135deg, #fdf5ee 0%, #faeade 100%); position:relative;" aria-label="Reseña destacada de Sebastiano González en Google Maps">
+              <div style="position:absolute; top:-12px; left:1.5rem; background:var(--primary); color:var(--primary-foreground); font-size:0.6875rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; padding:3px 10px; border-radius:999px;">⭐ Destacada</div>
+              <div class="stars" aria-label="5 de 5 estrellas">
+                <i data-lucide="star" style="width:16px;height:16px;fill:currentColor;" aria-hidden="true"></i>
+                <i data-lucide="star" style="width:16px;height:16px;fill:currentColor;" aria-hidden="true"></i>
+                <i data-lucide="star" style="width:16px;height:16px;fill:currentColor;" aria-hidden="true"></i>
+                <i data-lucide="star" style="width:16px;height:16px;fill:currentColor;" aria-hidden="true"></i>
+                <i data-lucide="star" style="width:16px;height:16px;fill:currentColor;" aria-hidden="true"></i>
+              </div>
+              <blockquote style="font-size:1rem; line-height:1.7; color:var(--foreground); font-style:italic; margin:0;">
+                "Excelente atención."
+              </blockquote>
+              <footer style="display:flex; align-items:center; gap:10px; margin-top:auto;">
+                <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#FBBC05,#EA4335);display:flex;align-items:center;justify-content:center;font-size:0.8125rem;font-weight:800;color:#fff;flex-shrink:0;" aria-hidden="true">SG</div>
+                <div>
+                  <p style="font-size:0.875rem; font-weight:600; color:var(--foreground); margin:0;">Sebastiano González</p>
+                  <p style="font-size:0.75rem; color:var(--muted-foreground); margin:0;">Guía Local · Hace 2 años</p>
+                </div>
+              </footer>
+            </article>
+
+            <!-- Reseña 3 — Carlos Lopez -->
+            <article class="review-card marquee-card" aria-label="Calificación de 5 estrellas de Carlos Lopez en Google Maps">
+              <div class="stars" aria-label="5 de 5 estrellas">
+                <i data-lucide="star" style="width:16px;height:16px;fill:currentColor;" aria-hidden="true"></i>
+                <i data-lucide="star" style="width:16px;height:16px;fill:currentColor;" aria-hidden="true"></i>
+                <i data-lucide="star" style="width:16px;height:16px;fill:currentColor;" aria-hidden="true"></i>
+                <i data-lucide="star" style="width:16px;height:16px;fill:currentColor;" aria-hidden="true"></i>
+                <i data-lucide="star" style="width:16px;height:16px;fill:currentColor;" aria-hidden="true"></i>
+              </div>
+              <blockquote style="font-size:1rem; line-height:1.7; color:var(--muted-foreground); font-style:italic; margin:0;">
+                "Los mejores precios de Paso de Indios. Todo excelente."
+              </blockquote>
+              <footer style="display:flex; align-items:center; gap:10px; margin-top:auto;">
+                <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#34A853,#4285F4);display:flex;align-items:center;justify-content:center;font-size:0.8125rem;font-weight:800;color:#fff;flex-shrink:0;" aria-hidden="true">CL</div>
+                <div>
+                  <p style="font-size:0.875rem; font-weight:600; color:var(--foreground); margin:0;">Carlos Lopez</p>
+                  <p style="font-size:0.75rem; color:var(--muted-foreground); margin:0;">Hace 3 años</p>
+                </div>
+              </footer>
+            </article>
+          </div>
         </div>
       </div>
     </section>
@@ -767,62 +835,62 @@
         <div style="display:grid; grid-template-columns:1fr; gap:1.5rem;" id="contact-grid">
 
           <!-- Contact Details -->
-          <div class="reveal bento-lg" data-delay="80">
-            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:2rem; margin-bottom:2rem;">
-
-              <div style="display:flex; gap:1rem; align-items:flex-start;">
-                <div class="contact-icon-box" aria-hidden="true">
-                  <i data-lucide="map-pin" style="width:18px;height:18px;"></i>
-                </div>
-                <div>
-                  <h3 style="font-size:0.875rem; font-weight:700; margin-bottom:0.375rem;">Dirección</h3>
-                  <address style="font-style:normal; font-size:0.875rem; color:var(--muted-foreground); line-height:1.65;">
-                    Coronel Fontana s/n<br>Paso de Indios, U9207<br>Chubut, Patagonia
-                  </address>
-                </div>
+          <div style="display:flex; flex-direction:column; gap:1.25rem;">
+            
+            <div class="contact-card-premium reveal" data-delay="80">
+              <div class="contact-icon-box" aria-hidden="true">
+                <i data-lucide="map-pin" style="width:20px;height:20px;"></i>
               </div>
-
-              <div style="display:flex; gap:1rem; align-items:flex-start;">
-                <div class="contact-icon-box" aria-hidden="true">
-                  <i data-lucide="clock" style="width:18px;height:18px;"></i>
-                </div>
-                <div>
-                  <h3 style="font-size:0.875rem; font-weight:700; margin-bottom:0.375rem;">Horario</h3>
-                  <p style="font-size:0.875rem; color:var(--muted-foreground); line-height:1.65; margin:0;">
-                    <time>Lun – Vie: 08:00 – 19:30</time><br>
-                    <time>Sáb: 08:00 – 12:30</time>
-                  </p>
-                </div>
+              <div>
+                <h3 style="font-size:0.9375rem; font-weight:700; margin-bottom:0.375rem;">Dirección</h3>
+                <address style="font-style:normal; font-size:0.875rem; color:var(--muted-foreground); line-height:1.65;">
+                  Coronel Fontana s/n · Paso de Indios, U9207<br>Chubut, Patagonia Argentina
+                </address>
               </div>
-
-              <div style="display:flex; gap:1rem; align-items:flex-start;">
-                <div class="contact-icon-box" aria-hidden="true">
-                  <i data-lucide="mail" style="width:18px;height:18px;"></i>
-                </div>
-                <div>
-                  <h3 style="font-size:0.875rem; font-weight:700; margin-bottom:0.375rem;">Email</h3>
-                  <a href="mailto:ventas@vientosurmateriales.com" style="font-size:0.875rem; color:var(--primary); text-decoration:none; font-weight:500;">ventas@vientosurmateriales.com</a>
-                </div>
-              </div>
-
             </div>
 
-            <!-- Social Row -->
-            <div style="padding-top:1.5rem; border-top:1px solid var(--border); display:flex; align-items:center; gap:0.75rem; flex-wrap:wrap;">
-              <span style="font-size:0.8125rem; color:var(--muted-foreground); font-weight:500;">Seguinos en:</span>
-              <a href="https://www.instagram.com/vientosurmateriales" target="_blank" rel="noopener" aria-label="Instagram" class="btn btn-outline" style="height:36px; padding:0 0.75rem; font-size:0.8125rem;">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg>
+            <div class="contact-card-premium reveal" data-delay="100">
+              <div class="contact-icon-box" aria-hidden="true">
+                <i data-lucide="clock" style="width:20px;height:20px;"></i>
+              </div>
+              <div>
+                <h3 style="font-size:0.9375rem; font-weight:700; margin-bottom:0.375rem;">Horario Comercial</h3>
+                <p style="font-size:0.875rem; color:var(--muted-foreground); line-height:1.65; margin:0;">
+                  <time>Lunes a Viernes: 08:00 – 19:30</time><br>
+                  <time>Sábados: 08:00 – 12:30</time>
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-card-premium reveal" data-delay="120">
+              <div class="contact-icon-box" aria-hidden="true">
+                <i data-lucide="mail" style="width:20px;height:20px;"></i>
+              </div>
+              <div>
+                <h3 style="font-size:0.9375rem; font-weight:700; margin-bottom:0.375rem;">Correo Electrónico</h3>
+                <a href="mailto:ventas@vientosurmateriales.com" style="font-size:0.875rem; color:var(--primary); text-decoration:none; font-weight:600; transition:color 0.2s;" onmouseenter="this.style.color='var(--brand-terracota-dark)'" onmouseleave="this.style.color='var(--primary)'">
+                  ventas@vientosurmateriales.com
+                </a>
+              </div>
+            </div>
+
+            <!-- Social Row Container -->
+            <div class="reveal" data-delay="140" style="padding-top:0.75rem; display:flex; align-items:center; gap:0.75rem; flex-wrap:wrap;">
+              <span style="font-size:0.8125rem; color:var(--muted-foreground); font-weight:600; letter-spacing:0.02em; text-transform:uppercase; margin-right:4px;">Seguinos:</span>
+              <a href="https://www.instagram.com/vientosurmateriales" target="_blank" rel="noopener" aria-label="Instagram" class="btn btn-outline" style="height:40px; padding:0 1rem; font-size:0.8125rem; border-radius:var(--r-md);">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right:4px;"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg>
                 Instagram
               </a>
-              <a href="https://www.facebook.com/profile.php?id=61591145682526" target="_blank" rel="noopener" aria-label="Facebook" class="btn btn-outline" style="height:36px; padding:0 0.75rem; font-size:0.8125rem;">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+              <a href="https://www.facebook.com/profile.php?id=61591145682526" target="_blank" rel="noopener" aria-label="Facebook" class="btn btn-outline" style="height:40px; padding:0 1rem; font-size:0.8125rem; border-radius:var(--r-md);">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" style="margin-right:4px;"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
                 Facebook
               </a>
-              <a href="https://wa.me/5492804361923" target="_blank" rel="noopener" aria-label="WhatsApp" class="btn btn-accent" style="height:36px; padding:0 0.75rem; font-size:0.8125rem;">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              <a href="https://wa.me/5492804361923" target="_blank" rel="noopener" aria-label="WhatsApp" class="btn btn-accent" style="height:40px; padding:0 1rem; font-size:0.8125rem; border-radius:var(--r-md);">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" style="margin-right:4px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                 WhatsApp
               </a>
             </div>
+
           </div>
 
           <!-- Google Maps real iframe -->
@@ -860,6 +928,7 @@
   </main>
 
   <!-- ═ ═  FOOTER PREMIUM ═ ═  -->
+  <div class="footer-top-accent"></div>
   <footer class="site-footer" role="contentinfo">
     <div class="container">
       <div class="footer-top">
@@ -898,14 +967,15 @@
     </div>
   </footer>
 
-  <!-- ══ FLOATING WHATSAPP ══ -->
+  <!-- ═ ═  FLOATING WHATSAPP ═ ═  -->
   <a href="https://wa.me/5492804361923" target="_blank" rel="noopener" class="fab-wa" aria-label="Abrir chat de WhatsApp" title="Chatea por WhatsApp">
+    <span class="fab-wa-tooltip">¿Cómo podemos ayudarte?</span>
     <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
     </svg>
   </a>
 
-  <!-- ══ SCRIPTS ══ -->
+  <!-- ═ ═  SCRIPTS ═ ═  -->
   <!-- Order matters: Swiper â†’ Lucide â†’ main.js -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
