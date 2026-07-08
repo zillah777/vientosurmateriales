@@ -276,7 +276,7 @@ function updateStoreStatus() {
 
   const statusClass = isOpen ? 'status-open' : 'status-closed';
   const statusLabel = isOpen ? 'Abierto' : 'Cerrado';
-  const detailLabel = isOpen ? ` (cierra ${closingInfo})` : ` (abre ${openingInfo})`;
+  const detailLabel = isOpen ? ` (${closingInfo})` : ` (${openingInfo})`;
 
   [topStatus, schedStatus].forEach(el => {
     if (!el) return;
