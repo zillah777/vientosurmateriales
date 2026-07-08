@@ -1042,7 +1042,7 @@ h3 { font-family: 'Outfit', 'Inter', sans-serif; font-size: 1.125rem; font-weigh
   display: flex;
   gap: 1.5rem;
   width: max-content;
-  animation: marquee-scroll 50s linear infinite;
+  animation: marquee-scroll 80s linear infinite;
 }
 .marquee-content:hover {
   animation-play-state: paused;
@@ -1050,7 +1050,8 @@ h3 { font-family: 'Outfit', 'Inter', sans-serif; font-size: 1.125rem; font-weigh
 
 @keyframes marquee-scroll {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  /* Se desplaza exactamente la mitad del contenido más la mitad del gap (0.75rem de 1.5rem) para un loop perfecto */
+  100% { transform: translateX(calc(-50% - 0.75rem)); }
 }
 
 .marquee-card {
