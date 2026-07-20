@@ -1062,14 +1062,27 @@ h3 { font-family: 'Outfit', 'Inter', sans-serif; font-size: 1.125rem; font-weigh
 /* ── Product Cards & Grid in Home/Catalog ── */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+@media (min-width: 640px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin-top: 2rem;
+  }
+}
+@media (min-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
 }
 
 .product-card {
   background: var(--bg-secondary);
-  border-radius: var(--r-xl);
+  border-radius: var(--r-lg);
   border: 1px solid var(--glass-border);
   overflow: hidden;
   display: flex;
@@ -1088,9 +1101,25 @@ h3 { font-family: 'Outfit', 'Inter', sans-serif; font-size: 1.125rem; font-weigh
 .product-img-wrap {
   position: relative;
   overflow: hidden;
-  height: 200px;
+  height: 120px;
   background: var(--bg-tertiary);
 }
+@media (min-width: 480px) {
+  .product-img-wrap {
+    height: 150px;
+  }
+}
+@media (min-width: 768px) {
+  .product-img-wrap {
+    height: 180px;
+  }
+}
+@media (min-width: 1024px) {
+  .product-img-wrap {
+    height: 200px;
+  }
+}
+
 .product-img-wrap img {
   width: 100%;
   height: 100%;
@@ -1104,11 +1133,11 @@ h3 { font-family: 'Outfit', 'Inter', sans-serif; font-size: 1.125rem; font-weigh
 
 .cat-badge-card {
   position: absolute;
-  top: 12px;
-  left: 12px;
-  padding: 4px 12px;
+  top: 8px;
+  left: 8px;
+  padding: 3px 8px;
   border-radius: var(--r-pill);
-  font-size: 0.6875rem;
+  font-size: 0.625rem;
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -1116,6 +1145,14 @@ h3 { font-family: 'Outfit', 'Inter', sans-serif; font-size: 1.125rem; font-weigh
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255,255,255,0.2);
   z-index: 10;
+}
+@media (min-width: 768px) {
+  .cat-badge-card {
+    top: 12px;
+    left: 12px;
+    padding: 4px 12px;
+    font-size: 0.6875rem;
+  }
 }
 
 .badge-hierros   { background: rgba(60,40,20,0.85); color: #f0c070; }
@@ -1125,75 +1162,124 @@ h3 { font-family: 'Outfit', 'Inter', sans-serif; font-size: 1.125rem; font-weigh
 
 .stock-tag {
   position: absolute;
-  top: 12px;
-  right: 12px;
+  top: 8px;
+  right: 8px;
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 3px;
   background: rgba(52,199,89,0.15);
   border: 1px solid rgba(52,199,89,0.4);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  padding: 4px 10px;
+  padding: 3px 8px;
   border-radius: var(--r-pill);
-  font-size: 0.6875rem;
+  font-size: 0.625rem;
   font-weight: 700;
   color: #2f855a;
   z-index: 10;
 }
+@media (min-width: 768px) {
+  .stock-tag {
+    top: 12px;
+    right: 12px;
+    padding: 4px 10px;
+    font-size: 0.6875rem;
+  }
+}
+
 .stock-dot {
-  width: 6px;
-  height: 6px;
+  width: 5px;
+  height: 5px;
   background: #34c759;
   border-radius: 50%;
   animation: pulse 2s infinite;
 }
+@media (min-width: 768px) {
+  .stock-dot {
+    width: 6px;
+    height: 6px;
+  }
+}
 
 .product-body {
-  padding: 1.25rem;
+  padding: 0.75rem;
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.25rem;
 }
+@media (min-width: 768px) {
+  .product-body {
+    padding: 1.25rem;
+    gap: 0.5rem;
+  }
+}
+
 .product-brand {
-  font-size: 0.75rem;
+  font-size: 0.6875rem;
   font-weight: 700;
   text-transform: uppercase;
   color: var(--brand-terracota);
   letter-spacing: 0.05em;
   margin: 0;
 }
+@media (min-width: 768px) {
+  .product-brand {
+    font-size: 0.75rem;
+  }
+}
+
 .product-name {
-  font-size: 1.0625rem;
+  font-size: 0.875rem;
   font-weight: 700;
   color: var(--text-primary);
   margin: 0;
-  line-height: 1.35;
+  line-height: 1.25;
 }
+@media (min-width: 768px) {
+  .product-name {
+    font-size: 1.0625rem;
+    line-height: 1.35;
+  }
+}
+
 .product-spec {
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
   color: var(--muted-foreground);
-  margin: 0 0 0.5rem 0;
+  margin: 0 0 0.25rem 0;
+}
+@media (min-width: 768px) {
+  .product-spec {
+    font-size: 0.8125rem;
+    margin: 0 0 0.5rem 0;
+  }
 }
 
 .btn-wa-product {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
+  gap: 4px;
   width: 100%;
-  padding: 0.75rem;
+  padding: 0.5rem;
   border-radius: var(--r-pill);
   background: var(--brown-tint);
   color: var(--text-primary);
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
   font-weight: 700;
   text-decoration: none;
   border: 1px solid transparent;
   transition: all 0.2s var(--spring);
   margin-top: auto;
 }
+@media (min-width: 768px) {
+  .btn-wa-product {
+    gap: 6px;
+    padding: 0.75rem;
+    font-size: 0.8125rem;
+  }
+}
+
 .btn-wa-product:hover {
   background: linear-gradient(135deg, var(--brand-terracota) 0%, var(--brand-terracota-dark) 100%);
   color: #fff;
