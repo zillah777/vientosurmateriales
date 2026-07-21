@@ -152,10 +152,10 @@ if (typeof Swiper !== 'undefined') {
       fadeEffect: { crossFade: true },
       loop: true,
       autoplay: {
-        delay: 5000,
+        delay: 7500, // 7.5 segundos por imagen para que puedan apreciarla
         disableOnInteraction: false,
       },
-      speed: 1200,
+      speed: 1800, // Transición más suave y elegante de 1.8 segundos
     });
   }
 
