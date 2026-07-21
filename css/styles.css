@@ -1161,6 +1161,8 @@ h3 { font-family: 'Outfit', 'Inter', sans-serif; font-size: 1.125rem; font-weigh
 .badge-cemento   { background: rgba(80,70,50,0.85); color: #e8dcc8; }
 .badge-pinturas  { background: rgba(20,60,100,0.85); color: #90c8f8; }
 .badge-ladrillos { background: rgba(140,40,20,0.85); color: #f8a090; }
+.badge-herramientas { background: rgba(60,60,60,0.85); color: #e0e0e0; }
+.badge-chapas    { background: rgba(100,110,120,0.85); color: #d8e4f0; }
 
 .stock-tag {
   position: absolute;
