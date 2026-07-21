@@ -258,10 +258,11 @@
       <div class="swiper hero-swiper" style="position:absolute !important; inset:0; z-index:0; pointer-events:none; height:100%; width:100%;">
         <div class="swiper-wrapper" style="height:100%; width:100%;">
           <!-- FOTOS VIENTO SUR MATERIALES -->
-          <div class="swiper-slide" style="background:url('assets/images/vs_hero_1.png') center/cover no-repeat; filter:brightness(0.45) saturate(0.8); height:100%; width:100%;"></div>
-          <div class="swiper-slide" style="background:url('assets/images/vs_hero_2.png') center/cover no-repeat; filter:brightness(0.45) saturate(0.8); height:100%; width:100%;"></div>
-          <div class="swiper-slide" style="background:url('assets/images/vs_hero_3.png') center/cover no-repeat; filter:brightness(0.45) saturate(0.8); height:100%; width:100%;"></div>
-          <div class="swiper-slide" style="background:url('assets/images/vs_hero_4.png') center/cover no-repeat; filter:brightness(0.45) saturate(0.8); height:100%; width:100%;"></div>
+          <!-- data-hero-img indica la imagen deseada; JS la verifica y aplica fallback si falla -->
+          <div class="swiper-slide hero-slide" data-hero-img="assets/images/vs_hero_1.png" style="background-color:#1a0d07; filter:brightness(0.45) saturate(0.8); height:100%; width:100%;"></div>
+          <div class="swiper-slide hero-slide" data-hero-img="assets/images/vs_hero_2.png" style="background-color:#1a0d07; filter:brightness(0.45) saturate(0.8); height:100%; width:100%;"></div>
+          <div class="swiper-slide hero-slide" data-hero-img="assets/images/vs_hero_3.png" style="background-color:#1a0d07; filter:brightness(0.45) saturate(0.8); height:100%; width:100%;"></div>
+          <div class="swiper-slide hero-slide" data-hero-img="assets/images/vs_hero_4.png" style="background-color:#1a0d07; filter:brightness(0.45) saturate(0.8); height:100%; width:100%;"></div>
         </div>
       </div>
 

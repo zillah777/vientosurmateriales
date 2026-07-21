@@ -77,20 +77,90 @@ if (typeof Swiper !== 'undefined') {
       1024: { slidesPerView: 4,   spaceBetween: 24 },
     }
   });
-  // Hero Background Swiper (Fade effect)
-  new Swiper('.hero-swiper', {
-    effect: 'fade',
-    fadeEffect: {
-      crossFade: true
-    },
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
-    speed: 1200,
-  });
-}
+  // Hero Background Swiper (Fade effect) — con fallback de imágenes
+  const HERO_FALLBACK = 'assets/images/hero_bg.png';
+  const heroSlides = Array.from(document.querySelectorAll('.hero-swiper .hero-slide'));
+
+  /**
+   * Precarga una imagen. Resuelve siempre (nunca rechaza):
+   * — true  → imagen OK
+   * — false → imagen rota / no encontrada
+   */
+  function preloadImage(src) {
+    return new Promise(resolve => {
+      const img = new Image();
+      img.onload  = () => resolve(true);
+      img.onerror = () => resolve(false);
+      img.src = src;
+    });
+  }
+
+  /**
+   * Aplica la imagen de fondo a un slide.
+   * Si la URL deseada falla, usa HERO_FALLBACK.
+   * Si el fallback también falla, el slide queda con el color base (#1a0d07).
+   */
+  async function initHeroSlider() {
+    const wrapper = document.querySelector('.hero-swiper .swiper-wrapper');
+    if (!wrapper) return;
+
+    let anyLoaded = false;
+
+    await Promise.all(heroSlides.map(async slide => {
+      const desired = slide.dataset.heroImg;
+      const ok = desired ? await preloadImage(desired) : false;
+
+      if (ok) {
+        slide.style.backgroundImage = `url('${desired}')`;
+        slide.style.backgroundSize  = 'cover';
+        slide.style.backgroundPosition = 'center';
+        slide.style.backgroundRepeat = 'no-repeat';
+        anyLoaded = true;
+      } else {
+        // Imagen deseada no disponible → intentar fallback
+        const fbOk = await preloadImage(HERO_FALLBACK);
+        if (fbOk) {
+          slide.style.backgroundImage = `url('${HERO_FALLBACK}')`;
+          slide.style.backgroundSize  = 'cover';
+          slide.style.backgroundPosition = 'center';
+          slide.style.backgroundRepeat = 'no-repeat';
+          anyLoaded = true;
+        }
+        // Si fbOk también falla, el slide conserva background-color:#1a0d07 del HTML
+      }
+    }));
+
+    // Garantía final: si ninguna imagen cargó, insertar al menos un slide de rescate
+    if (!anyLoaded) {
+      const rescue = document.createElement('div');
+      rescue.className = 'swiper-slide hero-slide';
+      rescue.style.cssText = [
+        `background: url('${HERO_FALLBACK}') center/cover no-repeat`,
+        'background-color:#1a0d07',
+        'filter:brightness(0.45) saturate(0.8)',
+        'height:100%',
+        'width:100%'
+      ].join(';');
+      // Remover slides vacíos y dejar solo el de rescate
+      heroSlides.forEach(s => s.remove());
+      wrapper.appendChild(rescue);
+    }
+
+    // Inicializar Swiper una vez que las imágenes están listas
+    new Swiper('.hero-swiper', {
+      effect: 'fade',
+      fadeEffect: { crossFade: true },
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      speed: 1200,
+    });
+  }
+
+  initHeroSlider();
+} // end if (typeof Swiper !== 'undefined')
 
 // ── 3. Navbar Sticky Shadow ───────────────────────────── //
 const navHeader = document.querySelector('.nav-header');
