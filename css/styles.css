@@ -946,8 +946,10 @@ h3 { font-family: 'Outfit', 'Inter', sans-serif; font-size: 1.125rem; font-weigh
     transform: scale(1.04) translate(0px, 0px);
   }
 }
-.hero-swiper .swiper-slide-active {
+/* Apply to all hero-bg-layers so outgoing slides don't abruptly stop and jump during the crossfade */
+.hero-swiper .swiper-slide .hero-bg-layer {
   animation: kenburns 14s ease-in-out infinite;
+  will-change: transform; /* Optimización GPU */
 }
 
 /* ── Noise / Grain Texture (Stripe-like) ───────────── */
