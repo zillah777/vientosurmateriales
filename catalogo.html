@@ -236,6 +236,9 @@
     .badge-cemento   { background: rgba(80,70,50,0.85); color: #e8dcc8; }
     .badge-pinturas  { background: rgba(20,60,100,0.85); color: #90c8f8; }
     .badge-ladrillos { background: rgba(140,40,20,0.85); color: #f8a090; }
+    .badge-herramientas { background: rgba(180,90,20,0.85); color: #f8c090; }
+    .badge-chapas       { background: rgba(60,75,95,0.85); color: #c8d8e8; }
+    .badge-ferreteria   { background: rgba(110,50,130,0.85); color: #e8b8f8; }
 
     /* Stock available tag */
     .stock-tag {
@@ -515,7 +518,7 @@
         <div class="filter-scroll" role="list" aria-label="Categorías de productos">
           <button class="filter-pill active" data-filter="all" role="listitem" aria-pressed="true" id="filter-all">
             Todos
-            <span class="pill-count" id="count-all">23</span>
+            <span class="pill-count" id="count-all">32</span>
           </button>
           <button class="filter-pill" data-filter="hierros" role="listitem" aria-pressed="false" id="filter-hierros">
             🏗️ Hierros
@@ -543,11 +546,15 @@
           </button>
           <button class="filter-pill" data-filter="herramientas" role="listitem" aria-pressed="false" id="filter-herramientas">
             🛠️ Herramientas
-            <span class="pill-count" id="count-herramientas">3</span>
+            <span class="pill-count" id="count-herramientas">6</span>
           </button>
           <button class="filter-pill" data-filter="chapas" role="listitem" aria-pressed="false" id="filter-chapas">
             🏗️ Chapas
             <span class="pill-count" id="count-chapas">1</span>
+          </button>
+          <button class="filter-pill" data-filter="ferreteria" role="listitem" aria-pressed="false" id="filter-ferreteria">
+            ⚙️ Ferretería & Equipamiento
+            <span class="pill-count" id="count-ferreteria">6</span>
           </button>
         </div>
       </div>
@@ -563,7 +570,7 @@
             <h2 id="productos-heading" style="font-size:1.25rem; font-weight:800; letter-spacing:-0.03em; margin:0 0 2px;">
               Todos los productos
             </h2>
-            <p id="results-count" style="margin:0;">23 productos disponibles</p>
+            <p id="results-count" style="margin:0;">32 productos disponibles</p>
           </div>
           <a href="https://wa.me/5492804361923?text=Hola!%20Quiero%20consultar%20el%20catálogo%20completo%20de%20productos%20disponibles." target="_blank" rel="noopener"
              style="display:inline-flex; align-items:center; gap:6px; font-size:0.8125rem; font-weight:700; color:var(--brand-terracota); text-decoration:none; border:1.5px solid var(--brand-terracota); padding:6px 14px; border-radius:var(--r-pill); transition:all 0.2s;"
@@ -965,6 +972,161 @@
             </div>
           </article>
 
+          <article class="product-card reveal" data-category="herramientas" data-name="Sierra Circular INGCO 1400W CS18528-4" data-delay="150">
+            <div class="product-img-wrap">
+              <img src="assets/images/prod_circu.jpeg" alt="Sierra Circular INGCO 1400W 185mm CS18528-4" loading="lazy" width="400" height="200" />
+              <span class="cat-badge-card badge-herramientas">🛠️ Herramientas</span>
+              <span class="stock-tag"><span class="stock-dot"></span>Stock</span>
+            </div>
+            <div class="product-body">
+              <p class="product-brand">INGCO</p>
+              <h3 class="product-name">Sierra Circular 1400W</h3>
+              <p class="product-spec">Hoja 185×20 mm · 4800 RPM · CS18528-4</p>
+              <a href="https://wa.me/5492804361923?text=Hola!%20Quiero%20consultar%20stock%20y%20precio%20de%20la%20Sierra%20Circular%20INGCO%201400W%20CS18528-4.%20%C2%BFTienen%20disponible%3F" target="_blank" rel="noopener" class="btn-wa-product" aria-label="Consultar Sierra Circular INGCO por WhatsApp">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Consultar Stock
+              </a>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-category="herramientas" data-name="Motosierra STIHL MS 210 1.8HP" data-delay="200">
+            <div class="product-img-wrap">
+              <img src="assets/images/prod_sierre.jpeg" alt="Motosierra STIHL MS 210 1.8 HP Espada 14 pulgadas" loading="lazy" width="400" height="200" />
+              <span class="cat-badge-card badge-herramientas">🛠️ Herramientas</span>
+              <span class="stock-tag"><span class="stock-dot"></span>Stock</span>
+            </div>
+            <div class="product-body">
+              <p class="product-brand">STIHL</p>
+              <h3 class="product-name">Motosierra STIHL MS 210</h3>
+              <p class="product-spec">1.8 HP (1.3 kW) · 30.1 cc · Espada 14" (35cm)</p>
+              <a href="https://wa.me/5492804361923?text=Hola!%20Quiero%20consultar%20stock%20y%20precio%20de%20la%20Motosierra%20STIHL%20MS%20210.%20%C2%BFTienen%20disponible%3F" target="_blank" rel="noopener" class="btn-wa-product" aria-label="Consultar Motosierra STIHL MS 210 por WhatsApp">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Consultar Stock
+              </a>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-category="herramientas" data-name="Motosierra KUSHIRO 52cc 2.7HP Espada 20" data-delay="250">
+            <div class="product-img-wrap">
+              <img src="assets/images/prod_sierrite.jpeg" alt="Motosierra KUSHIRO 52 cc Espada 20 pulgadas 8000 RPM" loading="lazy" width="400" height="200" />
+              <span class="cat-badge-card badge-herramientas">🛠️ Herramientas</span>
+              <span class="stock-tag"><span class="stock-dot"></span>Stock</span>
+            </div>
+            <div class="product-body">
+              <p class="product-brand">KUSHIRO</p>
+              <h3 class="product-name">Motosierra 52 cc Espada 20"</h3>
+              <p class="product-spec">2.7 HP (2.0 kW) · Espada 50.8 cm · 8000 RPM</p>
+              <a href="https://wa.me/5492804361923?text=Hola!%20Quiero%20consultar%20stock%20y%20precio%20de%20la%20Motosierra%20KUSHIRO%2052cc.%20%C2%BFTienen%20disponible%3F" target="_blank" rel="noopener" class="btn-wa-product" aria-label="Consultar Motosierra KUSHIRO por WhatsApp">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Consultar Stock
+              </a>
+            </div>
+          </article>
+
+          <!-- ══ FERRETERÍA & EQUIPAMIENTO ══ -->
+
+          <article class="product-card reveal" data-category="ferreteria" data-name="Calefactor Coppens UNIQO55 5500 kcal Multigas" data-delay="0">
+            <div class="product-img-wrap">
+              <img src="assets/images/prod_calo.png" alt="Calefactor Coppens UNIQO55 5500 kcal Tiro Balanceado Multigas" loading="lazy" width="400" height="200" />
+              <span class="cat-badge-card badge-ferreteria">⚙️ Ferretería</span>
+              <span class="stock-tag"><span class="stock-dot"></span>Stock</span>
+            </div>
+            <div class="product-body">
+              <p class="product-brand">Coppens</p>
+              <h3 class="product-name">Calefactor UNIQO55 5500 kcal</h3>
+              <p class="product-spec">Tiro Balanceado · Multigas · Salida Concéntrica</p>
+              <a href="https://wa.me/5492804361923?text=Hola!%20Quiero%20consultar%20stock%20y%20precio%20del%20Calefactor%20Coppens%20UNIQO55.%20%C2%BFTienen%20disponible%3F" target="_blank" rel="noopener" class="btn-wa-product" aria-label="Consultar Calefactor Coppens por WhatsApp">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Consultar Stock
+              </a>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-category="ferreteria" data-name="Plancha Vapor WINCO W38 Cerámica" data-delay="50">
+            <div class="product-img-wrap">
+              <img src="assets/images/prod_planche.jpeg" alt="Plancha con Vapor y Rociador WINCO W38 Base Cerámica" loading="lazy" width="400" height="200" />
+              <span class="cat-badge-card badge-ferreteria">⚙️ Ferretería</span>
+              <span class="stock-tag"><span class="stock-dot"></span>Stock</span>
+            </div>
+            <div class="product-body">
+              <p class="product-brand">WINCO</p>
+              <h3 class="product-name">Plancha a Vapor W38</h3>
+              <p class="product-spec">Base Cerámica Antiadherente · Golpe de Vapor</p>
+              <a href="https://wa.me/5492804361923?text=Hola!%20Quiero%20consultar%20stock%20y%20precio%20de%20la%20Plancha%20Vapor%20WINCO%20W38.%20%C2%BFTienen%20disponible%3F" target="_blank" rel="noopener" class="btn-wa-product" aria-label="Consultar Plancha WINCO W38 por WhatsApp">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Consultar Stock
+              </a>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-category="ferreteria" data-name="Plancha Vapor WINCO W34 2000W" data-delay="100">
+            <div class="product-img-wrap">
+              <img src="assets/images/prod_planchi.jpeg" alt="Plancha a Vapor WINCO W34 2000W Tanque 300mL" loading="lazy" width="400" height="200" />
+              <span class="cat-badge-card badge-ferreteria">⚙️ Ferretería</span>
+              <span class="stock-tag"><span class="stock-dot"></span>Stock</span>
+            </div>
+            <div class="product-body">
+              <p class="product-brand">WINCO</p>
+              <h3 class="product-name">Plancha a Vapor W34 2000W</h3>
+              <p class="product-spec">Tanque 300 mL · Planchado Vertical</p>
+              <a href="https://wa.me/5492804361923?text=Hola!%20Quiero%20consultar%20stock%20y%20precio%20de%20la%20Plancha%20Vapor%20WINCO%20W34.%20%C2%BFTienen%20disponible%3F" target="_blank" rel="noopener" class="btn-wa-product" aria-label="Consultar Plancha WINCO W34 por WhatsApp">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Consultar Stock
+              </a>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-category="ferreteria" data-name="Tanque de Agua Rotoplas Tricapa Domiciliario" data-delay="150">
+            <div class="product-img-wrap">
+              <img src="assets/images/prod_rotoplas.jpeg" alt="Tanque de Agua Rotoplas Tricapa Línea Domiciliaria 500L 750L 1000L 1500L" loading="lazy" width="400" height="200" />
+              <span class="cat-badge-card badge-ferreteria">⚙️ Ferretería</span>
+              <span class="stock-tag"><span class="stock-dot"></span>Stock</span>
+            </div>
+            <div class="product-body">
+              <p class="product-brand">Rotoplas</p>
+              <h3 class="product-name">Tanque de Agua Tricapa</h3>
+              <p class="product-spec">Polietileno Tricapa · 500L / 750L / 1000L / 1500L</p>
+              <a href="https://wa.me/5492804361923?text=Hola!%20Quiero%20consultar%20stock%20y%20precio%20del%20Tanque%20de%20Agua%20Rotoplas%20Tricapa.%20%C2%BFTienen%20disponible%3F" target="_blank" rel="noopener" class="btn-wa-product" aria-label="Consultar Tanque Rotoplas por WhatsApp">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Consultar Stock
+              </a>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-category="ferreteria" data-name="Termotanque UNIQO 80 Lts Coppens Multigas" data-delay="200">
+            <div class="product-img-wrap">
+              <img src="assets/images/prod_termo.png" alt="Termotanque UNIQO 80 Litros Coppens Multigas Conexión Superior" loading="lazy" width="400" height="200" />
+              <span class="cat-badge-card badge-ferreteria">⚙️ Ferretería</span>
+              <span class="stock-tag"><span class="stock-dot"></span>Stock</span>
+            </div>
+            <div class="product-body">
+              <p class="product-brand">Coppens</p>
+              <h3 class="product-name">Termotanque UNIQO 80 Lts</h3>
+              <p class="product-spec">Multigas (GN/GLP) · Conexión Superior · 5 Años Garantía</p>
+              <a href="https://wa.me/5492804361923?text=Hola!%20Quiero%20consultar%20stock%20y%20precio%20del%20Termotanque%20UNIQO%2080L%20Coppens.%20%C2%BFTienen%20disponible%3F" target="_blank" rel="noopener" class="btn-wa-product" aria-label="Consultar Termotanque UNIQO 80L por WhatsApp">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Consultar Stock
+              </a>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-category="ferreteria" data-name="Termotanque Eléctrico Coppens 95 Lts Eco Bianco" data-delay="250">
+            <div class="product-img-wrap">
+              <img src="assets/images/prod_termocope.png" alt="Termotanque Eléctrico Coppens 95 Litros Eco Bianco 220V" loading="lazy" width="400" height="200" />
+              <span class="cat-badge-card badge-ferreteria">⚙️ Ferretería</span>
+              <span class="stock-tag"><span class="stock-dot"></span>Stock</span>
+            </div>
+            <div class="product-body">
+              <p class="product-brand">Coppens</p>
+              <h3 class="product-name">Termotanque Eléctrico 95 Lts</h3>
+              <p class="product-spec">Línea Eco Bianco · 220V · 7 Años Garantía</p>
+              <a href="https://wa.me/5492804361923?text=Hola!%20Quiero%20consultar%20stock%20y%20precio%20del%20Termotanque%20Eléctrico%20Coppens%2095L.%20%C2%BFTienen%20disponible%3F" target="_blank" rel="noopener" class="btn-wa-product" aria-label="Consultar Termotanque Eléctrico Coppens 95L por WhatsApp">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Consultar Stock
+              </a>
+            </div>
+          </article>
+
           <!-- ══ CHAPAS ══ -->
 
           <article class="product-card reveal" data-category="chapas" data-name="Chapa Galvanizada Sinusoidal Acanalada C25" data-delay="150">
@@ -1077,7 +1239,8 @@
       'pinturas-exterior': 'Látex Exterior',
       'ladrillos':         'Ladrillos',
       'herramientas':      'Herramientas',
-      'chapas':            'Chapas'
+      'chapas':            'Chapas',
+      'ferreteria':        'Ferretería & Equipamiento'
     };
 
     function applyFilters() {
