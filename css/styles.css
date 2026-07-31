@@ -1309,7 +1309,7 @@ h3 { font-family: 'Outfit', 'Inter', sans-serif; font-size: 1.125rem; font-weigh
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25), 0 0 20px rgba(224, 111, 43, 0.15);
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 1.5rem;
 }
 
 @media (min-width: 992px) {
@@ -1333,11 +1333,12 @@ h3 { font-family: 'Outfit', 'Inter', sans-serif; font-size: 1.125rem; font-weigh
   border-radius: 50%;
 }
 
-.promo-banner-content {
+.promo-banner-left {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
   z-index: 1;
+  flex: 1;
 }
 
 .promo-badge-wrap {
@@ -1391,7 +1392,7 @@ h3 { font-family: 'Outfit', 'Inter', sans-serif; font-size: 1.125rem; font-weigh
   font-size: clamp(0.875rem, 2vw, 1rem);
   line-height: 1.5;
   margin: 0;
-  max-width: 620px;
+  max-width: 580px;
 }
 
 .promo-subtitle strong {
@@ -1402,16 +1403,10 @@ h3 { font-family: 'Outfit', 'Inter', sans-serif; font-size: 1.125rem; font-weigh
 .promo-banner-cta {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.5rem;
   z-index: 1;
   align-items: flex-start;
-}
-
-@media (min-width: 992px) {
-  .promo-banner-cta {
-    align-items: flex-end;
-    text-align: right;
-  }
+  margin-top: 0.5rem;
 }
 
 .promo-slogan {
@@ -1442,5 +1437,37 @@ h3 { font-family: 'Outfit', 'Inter', sans-serif; font-size: 1.125rem; font-weigh
   box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
   color: #ffffff;
 }
+
+.promo-banner-media {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .promo-banner-media {
+    width: 280px;
+  }
+}
+
+.promo-img-graphic {
+  width: 100%;
+  max-height: 220px;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: var(--r-lg);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 15px rgba(224, 111, 43, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.promo-banner-card:hover .promo-img-graphic {
+  transform: scale(1.03);
+}
+
 
 
