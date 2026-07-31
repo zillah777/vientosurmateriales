@@ -1292,7 +1292,7 @@ h3 { font-family: 'Outfit', 'Inter', sans-serif; font-size: 1.125rem; font-weigh
 }
 
 /* ══════════════════════════════════════════════════════════════
-   PROMO BANNER 12 CUOTAS FIJAS (BANCO DEL CHUBUT)
+   PROMO BANNER 12 CUOTAS FIJAS (BANCO DEL CHUBUT) - LIGHT THEME
    ══════════════════════════════════════════════════════════════ */
 .promo-banner-section {
   padding: 1.5rem 0;
@@ -1302,16 +1302,14 @@ h3 { font-family: 'Outfit', 'Inter', sans-serif; font-size: 1.125rem; font-weigh
 .promo-banner-card {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, rgba(28, 20, 15, 0.96) 0%, rgba(45, 29, 18, 0.97) 50%, rgba(20, 14, 10, 0.98) 100%);
-  border: 1.5px solid rgba(224, 111, 43, 0.45);
+  background: linear-gradient(135deg, #ffffff 0%, #fffbf6 50%, #fef7ed 100%);
+  border: 1.5px solid rgba(224, 111, 43, 0.35);
   border-radius: var(--r-xl);
   padding: 1.75rem 2rem;
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35), 0 0 25px rgba(224, 111, 43, 0.18);
+  box-shadow: 0 10px 30px rgba(224, 111, 43, 0.12), 0 4px 15px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
 }
 
 .promo-banner-card::before {
@@ -1321,7 +1319,7 @@ h3 { font-family: 'Outfit', 'Inter', sans-serif; font-size: 1.125rem; font-weigh
   right: -10%;
   width: 320px;
   height: 320px;
-  background: radial-gradient(circle, rgba(224, 111, 43, 0.22) 0%, rgba(224, 111, 43, 0) 70%);
+  background: radial-gradient(circle, rgba(224, 111, 43, 0.12) 0%, rgba(224, 111, 43, 0) 70%);
   pointer-events: none;
   border-radius: 50%;
 }
@@ -1333,7 +1331,7 @@ h3 { font-family: 'Outfit', 'Inter', sans-serif; font-size: 1.125rem; font-weigh
   flex-wrap: wrap;
   gap: 1rem;
   z-index: 1;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(224, 111, 43, 0.15);
   padding-bottom: 1rem;
 }
 
@@ -1350,8 +1348,8 @@ h3 { font-family: 'Outfit', 'Inter', sans-serif; font-size: 1.125rem; font-weigh
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(224, 111, 43, 0.2);
 }
 
 .bch-logo-img {
@@ -1369,7 +1367,6 @@ h3 { font-family: 'Outfit', 'Inter', sans-serif; font-size: 1.125rem; font-weigh
 .vs-logo-img {
   height: 28px;
   width: auto;
-  filter: brightness(1.1);
 }
 
 .promo-badge-wrap {
@@ -1387,18 +1384,17 @@ h3 { font-family: 'Outfit', 'Inter', sans-serif; font-size: 1.125rem; font-weigh
   padding: 4px 14px;
   border-radius: var(--r-pill);
   text-transform: uppercase;
-  box-shadow: 0 2px 10px rgba(224, 111, 43, 0.4);
+  box-shadow: 0 2px 10px rgba(224, 111, 43, 0.3);
 }
 
 .bank-tag {
-  background: rgba(255, 255, 255, 0.12);
-  color: #f0c070;
+  background: rgba(224, 111, 43, 0.1);
+  color: #c25212;
   font-size: 0.75rem;
   font-weight: 700;
   padding: 4px 12px;
   border-radius: var(--r-pill);
-  border: 1px solid rgba(240, 192, 112, 0.35);
-  backdrop-filter: blur(8px);
+  border: 1px solid rgba(224, 111, 43, 0.25);
 }
 
 .promo-banner-body {
@@ -1423,25 +1419,26 @@ h3 { font-family: 'Outfit', 'Inter', sans-serif; font-size: 1.125rem; font-weigh
 .promo-title {
   font-size: clamp(2rem, 4.5vw, 2.75rem);
   font-weight: 900;
-  color: #ffffff;
+  color: #c25212;
   letter-spacing: -0.03em;
   line-height: 1.05;
   margin: 0 0 0.5rem 0;
-  background: linear-gradient(135deg, #ffffff 0%, #f0c070 100%);
+  background: linear-gradient(135deg, #e06f2b 0%, #9a3412 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .promo-subtitle {
-  color: rgba(255, 255, 255, 0.88);
+  color: #334155;
   font-size: clamp(0.875rem, 2vw, 1.025rem);
   line-height: 1.6;
   margin: 0;
   max-width: 620px;
+  font-weight: 500;
 }
 
 .promo-subtitle strong {
-  color: #f0c070;
+  color: #c25212;
   font-weight: 700;
 }
 
@@ -1462,7 +1459,7 @@ h3 { font-family: 'Outfit', 'Inter', sans-serif; font-size: 1.125rem; font-weigh
 .promo-slogan {
   font-size: 0.8125rem;
   font-style: italic;
-  color: rgba(255, 255, 255, 0.75);
+  color: #64748b;
 }
 
 .btn-promo-wa {
@@ -1476,7 +1473,7 @@ h3 { font-family: 'Outfit', 'Inter', sans-serif; font-size: 1.125rem; font-weigh
   padding: 0.75rem 1.6rem;
   border-radius: var(--r-pill);
   text-decoration: none;
-  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.38);
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35);
   transition: all 0.3s ease;
   white-space: nowrap;
 }
@@ -1484,7 +1481,7 @@ h3 { font-family: 'Outfit', 'Inter', sans-serif; font-size: 1.125rem; font-weigh
 .btn-promo-wa:hover {
   background: #20ba5a;
   transform: translateY(-2px);
-  box-shadow: 0 6px 22px rgba(37, 211, 102, 0.55);
+  box-shadow: 0 6px 22px rgba(37, 211, 102, 0.5);
   color: #ffffff;
 }
 
