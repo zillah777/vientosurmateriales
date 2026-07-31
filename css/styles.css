@@ -1291,3 +1291,156 @@ h3 { font-family: 'Outfit', 'Inter', sans-serif; font-size: 1.125rem; font-weigh
   transform: translateY(-2px);
 }
 
+/* ══════════════════════════════════════════════════════════════
+   PROMO BANNER 12 CUOTAS FIJAS
+   ══════════════════════════════════════════════════════════════ */
+.promo-banner-section {
+  padding: 1.5rem 0;
+  background: var(--bg-primary);
+}
+
+.promo-banner-card {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1c1511 0%, #2b1c13 50%, #17110d 100%);
+  border: 1px solid rgba(224, 111, 43, 0.4);
+  border-radius: var(--r-xl);
+  padding: 1.5rem 1.75rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25), 0 0 20px rgba(224, 111, 43, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+@media (min-width: 992px) {
+  .promo-banner-card {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.75rem 2.5rem;
+  }
+}
+
+.promo-banner-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(224, 111, 43, 0.25) 0%, rgba(224, 111, 43, 0) 70%);
+  pointer-events: none;
+  border-radius: 50%;
+}
+
+.promo-banner-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  z-index: 1;
+}
+
+.promo-badge-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.promo-badge {
+  background: linear-gradient(135deg, #e06f2b 0%, #b85218 100%);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  padding: 4px 12px;
+  border-radius: var(--r-pill);
+  text-transform: uppercase;
+  box-shadow: 0 2px 8px rgba(224, 111, 43, 0.4);
+}
+
+.bank-tag {
+  background: rgba(255, 255, 255, 0.12);
+  color: #f0c070;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: var(--r-pill);
+  border: 1px solid rgba(240, 192, 112, 0.3);
+  backdrop-filter: blur(8px);
+}
+
+.promo-text-group {
+  margin-top: 0.25rem;
+}
+
+.promo-title {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin: 0 0 0.35rem 0;
+  background: linear-gradient(135deg, #ffffff 0%, #f0c070 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.promo-subtitle {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: clamp(0.875rem, 2vw, 1rem);
+  line-height: 1.5;
+  margin: 0;
+  max-width: 620px;
+}
+
+.promo-subtitle strong {
+  color: #f0c070;
+  font-weight: 700;
+}
+
+.promo-banner-cta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  z-index: 1;
+  align-items: flex-start;
+}
+
+@media (min-width: 992px) {
+  .promo-banner-cta {
+    align-items: flex-end;
+    text-align: right;
+  }
+}
+
+.promo-slogan {
+  font-size: 0.8125rem;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.btn-promo-wa {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #25d366;
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--r-pill);
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.35);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-promo-wa:hover {
+  background: #20ba5a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+  color: #ffffff;
+}
+
+
