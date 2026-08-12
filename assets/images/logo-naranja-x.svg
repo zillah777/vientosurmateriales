@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
+  <rect width="200" height="60" rx="12" fill="none"/>
+  <!-- Naranja X Logo Icon & Text -->
+  <g transform="translate(10, 8)">
+    <!-- Symbol / Stylized 'N' Badge -->
+    <rect x="0" y="2" width="40" height="40" rx="10" fill="#FF5000"/>
+    <path d="M12 32 V12 L28 32 V12" fill="none" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Brand Name "naranja X" -->
+    <text x="50" y="27" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="20" font-weight="900" fill="#FF5000" letter-spacing="-0.5">naranja<tspan fill="#FF5000" font-weight="900">X</tspan></text>
+    <text x="51" y="39" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="9" font-weight="700" fill="#71717A" letter-spacing="1">TARJETA &amp; CRÉDITO</text>
+  </g>
+</svg>

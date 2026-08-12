@@ -1292,198 +1292,277 @@ h3 { font-family: 'Outfit', 'Inter', sans-serif; font-size: 1.125rem; font-weigh
 }
 
 /* ══════════════════════════════════════════════════════════════
-   PROMO BANNER 12 CUOTAS FIJAS (BANCO DEL CHUBUT) - LIGHT THEME
+   SECCIÓN DE FINANCIAMIENTO Y MEDIOS DE PAGO - MODERN REDESIGN
    ══════════════════════════════════════════════════════════════ */
 .promo-banner-section {
-  padding: 1.5rem 0;
-  background: var(--bg-primary);
-}
-
-.promo-banner-card {
+  padding: 4rem 0;
+  background: linear-gradient(180deg, var(--bg-primary) 0%, rgba(248, 250, 252, 0.8) 100%);
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, #ffffff 0%, #fffbf6 50%, #fef7ed 100%);
-  border: 1.5px solid rgba(224, 111, 43, 0.35);
-  border-radius: var(--r-xl);
-  padding: 1.75rem 2rem;
-  box-shadow: 0 10px 30px rgba(224, 111, 43, 0.12), 0 4px 15px rgba(0, 0, 0, 0.05);
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
 }
 
-.promo-banner-card::before {
-  content: "";
-  position: absolute;
-  top: -40%;
-  right: -10%;
-  width: 320px;
-  height: 320px;
-  background: radial-gradient(circle, rgba(224, 111, 43, 0.12) 0%, rgba(224, 111, 43, 0) 70%);
-  pointer-events: none;
-  border-radius: 50%;
+.financing-header-wrap {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 3rem auto;
 }
 
-.promo-banner-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1rem;
-  z-index: 1;
-  border-bottom: 1px solid rgba(224, 111, 43, 0.15);
-  padding-bottom: 1rem;
-}
-
-.promo-logos-wrap {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.bank-logo-badge {
-  background: #ffffff;
-  padding: 6px 14px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(224, 111, 43, 0.2);
-}
-
-.bch-logo-img {
-  height: 28px;
-  width: auto;
-  display: block;
-}
-
-.vs-logo-badge {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.vs-logo-img {
-  height: 28px;
-  width: auto;
-}
-
-.promo-badge-wrap {
-  display: flex;
+.financing-eyebrow {
+  display: inline-flex;
   align-items: center;
   gap: 8px;
-}
-
-.promo-badge {
-  background: linear-gradient(135deg, #e06f2b 0%, #b85218 100%);
-  color: #ffffff;
-  font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 0.05em;
-  padding: 4px 14px;
-  border-radius: var(--r-pill);
-  text-transform: uppercase;
-  box-shadow: 0 2px 10px rgba(224, 111, 43, 0.3);
-}
-
-.bank-tag {
   background: rgba(224, 111, 43, 0.1);
   color: #c25212;
   font-size: 0.75rem;
-  font-weight: 700;
-  padding: 4px 12px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 6px 16px;
   border-radius: var(--r-pill);
   border: 1px solid rgba(224, 111, 43, 0.25);
+  margin-bottom: 1rem;
 }
 
-.promo-banner-body {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-  z-index: 1;
-}
-
-@media (min-width: 992px) {
-  .promo-banner-body {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-}
-
-.promo-text-group {
-  flex: 1;
-}
-
-.promo-title {
-  font-size: clamp(2rem, 4.5vw, 2.75rem);
-  font-weight: 900;
-  color: #c25212;
+.financing-main-title {
+  font-size: clamp(1.85rem, 3.5vw, 2.5rem);
+  font-weight: 800;
+  color: #0f172a;
   letter-spacing: -0.03em;
-  line-height: 1.05;
-  margin: 0 0 0.5rem 0;
-  background: linear-gradient(135deg, #e06f2b 0%, #9a3412 100%);
+  line-height: 1.15;
+  margin: 0 0 0.85rem 0;
+}
+
+.financing-main-title span {
+  background: linear-gradient(135deg, #e06f2b 0%, #b85218 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.promo-subtitle {
-  color: #334155;
-  font-size: clamp(0.875rem, 2vw, 1.025rem);
+.financing-lead-text {
+  color: #475569;
+  font-size: 1rem;
   line-height: 1.6;
   margin: 0;
-  max-width: 620px;
-  font-weight: 500;
 }
 
-.promo-subtitle strong {
-  color: #c25212;
-  font-weight: 700;
+/* Grilla de Tarjetas */
+.financing-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.75rem;
 }
 
-.promo-banner-footer {
-  display: flex;
-  flex-direction: column;
-  gap: 0.65rem;
-  align-items: flex-start;
-}
-
-@media (min-width: 992px) {
-  .promo-banner-footer {
-    align-items: flex-end;
-    text-align: right;
+@media (min-width: 768px) {
+  .financing-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-.promo-slogan {
-  font-size: 0.8125rem;
-  font-style: italic;
-  color: #64748b;
+@media (min-width: 1100px) {
+  .financing-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
-.btn-promo-wa {
+.financing-card {
+  position: relative;
+  background: #ffffff;
+  border: 1.5px solid rgba(226, 232, 240, 0.9);
+  border-radius: 20px;
+  padding: 2rem 1.75rem;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.04), 0 4px 12px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.35deg cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+.financing-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #e06f2b, #f97316);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.financing-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(224, 111, 43, 0.12), 0 8px 20px rgba(0, 0, 0, 0.06);
+  border-color: rgba(224, 111, 43, 0.35);
+}
+
+.financing-card:hover::before {
+  opacity: 1;
+}
+
+/* Card Destacada chubut / naranja */
+.financing-card.featured-bch {
+  border-color: rgba(225, 0, 30, 0.25);
+  background: linear-gradient(180deg, #ffffff 0%, #fff8f8 100%);
+}
+
+.financing-card.featured-bch::before {
+  background: linear-gradient(90deg, #e1001e, #e06f2b);
+  opacity: 1;
+}
+
+.financing-card.featured-naranja {
+  border-color: rgba(255, 80, 0, 0.25);
+  background: linear-gradient(180deg, #ffffff 0%, #fff9f5 100%);
+}
+
+.financing-card.featured-naranja::before {
+  background: linear-gradient(90deg, #ff5000, #ff8800);
+  opacity: 1;
+}
+
+/* Header de Tarjeta */
+.financing-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.financing-logo-badge {
+  background: #ffffff;
+  padding: 8px 16px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  height: 48px;
+}
+
+.financing-logo-badge img {
+  max-height: 32px;
+  width: auto;
+  object-fit: contain;
+}
+
+.financing-tag {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  padding: 4px 12px;
+  border-radius: var(--r-pill);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.financing-tag.tag-bch {
+  background: rgba(225, 0, 30, 0.1);
+  color: #c8001a;
+  border: 1px solid rgba(225, 0, 30, 0.2);
+}
+
+.financing-tag.tag-naranja {
+  background: rgba(255, 80, 0, 0.1);
+  color: #e04400;
+  border: 1px solid rgba(255, 80, 0, 0.2);
+}
+
+.financing-tag.tag-condiciones {
+  background: rgba(30, 41, 59, 0.08);
+  color: #1e293b;
+  border: 1px solid rgba(30, 41, 59, 0.15);
+}
+
+/* Cuerpo de Tarjeta */
+.financing-card-body {
+  margin-bottom: 1.75rem;
+}
+
+.financing-card-title {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #0f172a;
+  line-height: 1.2;
+  margin: 0 0 0.65rem 0;
+  letter-spacing: -0.02em;
+}
+
+.financing-card-desc {
+  color: #475569;
+  font-size: 0.9125rem;
+  line-height: 1.6;
+  margin: 0 0 1.25rem 0;
+}
+
+.financing-card-desc strong {
+  color: #0f172a;
+}
+
+/* Bullets / Badges de opciones */
+.financing-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.financing-feature-pill {
   display: inline-flex;
   align-items: center;
+  gap: 6px;
+  background: rgba(241, 245, 249, 0.9);
+  color: #334155;
+  font-size: 0.785rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(203, 213, 225, 0.6);
+}
+
+.financing-feature-pill svg {
+  color: #e06f2b;
+}
+
+/* Footer / CTA */
+.financing-card-footer {
+  margin-top: auto;
+  padding-top: 1.25rem;
+  border-top: 1px dashed rgba(226, 232, 240, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.btn-financing-wa {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   gap: 8px;
   background: #25d366;
   color: #ffffff;
   font-size: 0.875rem;
   font-weight: 700;
-  padding: 0.75rem 1.6rem;
-  border-radius: var(--r-pill);
+  padding: 0.8rem 1.25rem;
+  border-radius: 12px;
   text-decoration: none;
-  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35);
-  transition: all 0.3s ease;
-  white-space: nowrap;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.25);
+  transition: all 0.25s ease;
 }
 
-.btn-promo-wa:hover {
-  background: #20ba5a;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 22px rgba(37, 211, 102, 0.5);
+.btn-financing-wa:hover {
+  background: #1eb956;
   color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.4);
 }
+
 
 
 
