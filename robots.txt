@@ -2,4 +2,11 @@ User-agent: *
 Allow: /
 Disallow: /private/
 
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
 Sitemap: https://www.vientosurmateriales.com/sitemap.xml
+
