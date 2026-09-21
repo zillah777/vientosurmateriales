@@ -3,24 +3,49 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.vientosurmateriales.com/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://www.vientosurmateriales.com/assets/images/og_logo.jpg</image:loc>
-      <image:title>Viento Sur Materiales — Corralón en Chubut y Ferretería Industrial</image:title>
-      <image:caption>El corralón y ferretería líder en Chubut y la Patagonia</image:caption>
+      <image:title>Viento Sur Materiales — Ferretería y Corralón en Chubut</image:title>
+      <image:caption>Ferretería y corralón de referencia en Chubut: materiales de construcción, hierros Acindar, cemento y herramientas</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.vientosurmateriales.com/assets/images/real_mostrador_ferreteria.png</image:loc>
+      <image:title>Mostrador y Ferretería Industrial Viento Sur Chubut</image:title>
+      <image:caption>Atención y venta de herramientas industriales y materiales de obra en Chubut</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.vientosurmateriales.com/assets/images/real_deposito_interior.png</image:loc>
+      <image:title>Depósito de Materiales de Construcción en Chubut</image:title>
+      <image:caption>Stock permanente de cemento, cal, hierros y chapas en Chubut</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://www.vientosurmateriales.com/catalogo.html</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://www.vientosurmateriales.com/catalogo</loc>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.vientosurmateriales.com/assets/images/og_logo.jpg</image:loc>
+      <image:title>Catálogo Online de Ferretería y Corralón en Chubut</image:title>
+      <image:caption>Precios, stock y cotizaciones de materiales de construcción y herramientas en Chubut</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.vientosurmateriales.com/assets/images/cat_hierros.png</image:loc>
+      <image:title>Hierros Acindar y Mallas para Obra en Chubut</image:title>
+      <image:caption>Catálogo de hierros nervados y mallas electrosoldadas en Chubut</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.vientosurmateriales.com/assets/images/cat_chapas.png</image:loc>
+      <image:title>Chapas Sinusoidales y Trapezoidales C25 Chubut</image:title>
+      <image:caption>Chapas para techos y tinglados en Chubut</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://www.vientosurmateriales.com/politicas.html</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://www.vientosurmateriales.com/politicas</loc>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
